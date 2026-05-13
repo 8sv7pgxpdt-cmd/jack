@@ -1,0 +1,43 @@
+name: Daily Vibe Coding Fetch
+
+on:
+  schedule:
+    # 北京时间每天早上 8:00 (UTC 0:00)
+    - cron: "0 0 * * *"
+  # 也允许手动触发
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch content
+        run: python aggregator.py
+
+      - name: Commit & push updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # 提交数据文件变更
+          git add data/articles.json web/articles.json
+
+          if git diff --cached --quiet; then
+            echo "No changes, skip commit."
+          else
+            git commit -m "📡 Daily content update: $(date +'%Y-%m-%d')"
+            git push
+          fi

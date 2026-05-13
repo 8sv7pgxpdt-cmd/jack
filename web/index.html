@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vibe Coding 内容聚合</title>
+<style>
+  :root {
+    --bg: #0a0a10;
+    --card: #12121f;
+    --card-hover: #18182a;
+    --text: #c8c8d4;
+    --text2: #7a7a8e;
+    --accent: #00e5ff;
+    --accent2: #ff006e;
+    --accent-dim: rgba(0, 229, 255, 0.12);
+    --border: #1e1e32;
+    --glow: 0 0 18px rgba(0, 229, 255, 0.18);
+    --glow-pink: 0 0 18px rgba(255, 0, 110, 0.2);
+    --radius: 6px;
+    --font-heading: "SF Mono", "Cascadia Code", "JetBrains Mono", "PingFang SC",
+      "Microsoft YaHei", monospace;
+    --font-body: -apple-system, BlinkMacSystemFont, "PingFang SC",
+      "Microsoft YaHei", sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* subtle scanline texture */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.03) 2px,
+      rgba(0,0,0,0.03) 4px
+    );
+  }
+
+  /* header */
+  .header {
+    padding: 32px 20px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .header::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  }
+  .header h1 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #fff;
+  }
+  .header h1 .dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent2);
+    margin: 0 4px;
+    vertical-align: middle;
+    box-shadow: var(--glow-pink);
+  }
+  .update-badge {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: .72rem;
+    color: var(--text2);
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+  }
+  .update-badge .pulse {
+    display: inline-block;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 6px;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 6px var(--accent); }
+    50% { opacity: .3; box-shadow: 0 0 2px var(--accent); }
+  }
+
+  /* container */
+  .container { max-width: 800px; margin: 0 auto; padding: 0 16px; }
+
+  /* filter bar */
+  .filter-bar {
+    display: flex; align-items: center; gap: 8px;
+    margin: 20px 0 0;
+    padding: 12px 0;
+    flex-wrap: wrap;
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(10,10,16,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .filter-bar input {
+    flex: 1; min-width: 160px;
+    padding: 9px 14px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-size: .85rem;
+    outline: none;
+    transition: border-color .2s;
+    font-family: var(--font-body);
+  }
+  .filter-bar input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-dim);
+  }
+  .filter-bar input::placeholder { color: #444; }
+
+  .cat-chip {
+    padding: 8px 18px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text2);
+    font-size: .82rem;
+    cursor: pointer;
+    transition: all .18s;
+    white-space: nowrap;
+    user-select: none;
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
+  }
+  .cat-chip:hover { border-color: var(--accent); color: var(--accent); }
+  .cat-chip.active {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: var(--glow);
+  }
+
+  /* stat row */
+  .stat-row {
+    display: flex; gap: 16px; margin: 16px 0 8px;
+    font-size: .76rem; color: var(--text2);
+    font-family: var(--font-heading);
+  }
+  .stat-row span { color: var(--accent); }
+
+  /* timeline */
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before {
+    content: "";
+    position: absolute; left: 8px; top: 4px; bottom: 4px;
+    width: 1px;
+    background: linear-gradient(180deg,
+      var(--accent), var(--accent2), transparent);
+  }
+  .day-group { margin-bottom: 20px; }
+  .day-label {
+    font-size: .78rem; font-weight: 500;
+    color: var(--accent);
+    padding: 6px 0; margin-bottom: 6px;
+    position: relative;
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
+  }
+  .day-label::before {
+    content: "";
+    position: absolute; left: -23px; top: 9px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent);
+  }
+
+  /* card */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin-bottom: 8px;
+    transition: border-color .15s, box-shadow .15s, background .15s;
+    position: relative;
+  }
+  .card:hover {
+    background: var(--card-hover);
+    border-color: rgba(0,229,255,0.2);
+    box-shadow: 0 0 20px rgba(0,0,0,.4);
+  }
+  .card.featured {
+    border-color: rgba(255,0,110,0.2);
+    background: rgba(255,0,110,0.03);
+  }
+  .card.featured:hover {
+    border-color: rgba(255,0,110,0.4);
+    box-shadow: var(--glow-pink);
+  }
+
+  .card .top-row {
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 6px; flex-wrap: wrap;
+  }
+  .source-tag {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: .72rem; color: var(--text2);
+    background: rgba(255,255,255,0.04);
+    padding: 2px 10px; border-radius: 3px;
+    font-family: var(--font-heading);
+  }
+  .cat-tag {
+    font-size: .68rem;
+    padding: 2px 10px; border-radius: 3px;
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
+  }
+  .cat-tag.tutorial { border: 1px solid rgba(0,229,255,0.3); color: var(--accent); }
+  .cat-tag.news    { border: 1px solid rgba(200,200,220,0.3); color: #a0a0b8; }
+  .cat-tag.featured { border: 1px solid rgba(255,0,110,0.4); color: var(--accent2); }
+
+  .card h3 {
+    font-size: .92rem; font-weight: 600; margin-bottom: 4px;
+    line-height: 1.45;
+  }
+  .card h3 a {
+    color: #e0e0ee; text-decoration: none;
+  }
+  .card h3 a:hover { color: var(--accent); }
+
+  .card .summary {
+    font-size: .82rem; color: var(--text2); margin-bottom: 6px;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .card .bottom-row {
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: .74rem; color: #555; flex-wrap: wrap; gap: 4px;
+  }
+  .tags { display: flex; gap: 4px; flex-wrap: wrap; }
+  .tag {
+    background: rgba(0,229,255,0.06);
+    color: var(--accent);
+    padding: 2px 8px; border-radius: 3px; font-size: .7rem;
+    font-family: var(--font-heading);
+  }
+
+  /* empty */
+  .empty {
+    text-align: center; padding: 80px 20px; color: #333;
+  }
+  .empty .icon { font-size: 2.5rem; margin-bottom: 12px; opacity: .6; }
+
+  /* footer */
+  .footer {
+    text-align: center; padding: 50px 20px 40px;
+    font-size: .72rem; color: #2a2a38;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 600px) {
+    .header h1 { font-size: 1.3rem; }
+    .filter-bar { position: static; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>VIBE<span class="dot"></span>CODING</h1>
+  <div class="update-badge">
+    <span class="pulse"></span><span id="updateTime">加载中...</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="filter-bar">
+    <input type="text" id="searchInput" placeholder="搜索...">
+    <span class="cat-chip active" data-cat="全部">全部</span>
+    <span class="cat-chip" data-cat="教程">教程</span>
+    <span class="cat-chip" data-cat="资讯">资讯</span>
+    <span class="cat-chip" data-cat="精华">精华</span>
+  </div>
+
+  <div class="stat-row" id="statRow"></div>
+
+  <div class="timeline" id="timeline"></div>
+  <div class="empty" id="empty" style="display:none">
+    <div class="icon">&#x25A1;</div>
+    <p>暂无内容，请先运行抓取脚本</p>
+  </div>
+
+</div>
+
+<div class="footer">POWERED BY PYTHON + GITHUB ACTIONS</div>
+
+<script>
+const DATA_URL = "articles.json";
+
+let allArticles = [];
+let activeCat = "全部";
+
+async function loadData() {
+  try {
+    const resp = await fetch(DATA_URL);
+    if (!resp.ok) throw new Error("HTTP " + resp.status);
+    allArticles = (await resp.json()).articles || [];
+  } catch (e) {
+    console.error("加载失败:", e);
+    allArticles = [];
+  }
+
+  const ua = allArticles.length > 0 ? allArticles[0].fetched_at : null;
+  document.getElementById("updateTime").textContent = ua
+    ? `最后更新 ${formatTime(ua)}`
+    : "暂无数据";
+
+  renderStats();
+  renderAll();
+}
+
+function renderStats() {
+  const cats = { "教程": 0, "资讯": 0, "精华": 0 };
+  allArticles.forEach(a => { cats[a.category] = (cats[a.category] || 0) + 1; });
+  document.getElementById("statRow").innerHTML =
+    `共 <span>${allArticles.length}</span> 篇 · 教程 <span>${cats["教程"]}</span> · 资讯 <span>${cats["资讯"]}</span> · 精华 <span>${cats["精华"]}</span>`;
+}
+
+function renderAll() {
+  const search = (document.getElementById("searchInput").value || "").toLowerCase();
+
+  let filtered = allArticles;
+  if (activeCat !== "全部") {
+    filtered = filtered.filter(a => a.category === activeCat);
+  }
+  if (search) {
+    filtered = filtered.filter(a =>
+      (a.title || "").toLowerCase().includes(search) ||
+      (a.summary || "").toLowerCase().includes(search) ||
+      (a.source || "").toLowerCase().includes(search) ||
+      (a.tags || []).some(t => t.toLowerCase().includes(search))
+    );
+  }
+
+  const container = document.getElementById("timeline");
+  const empty = document.getElementById("empty");
+
+  if (filtered.length === 0) {
+    container.innerHTML = "";
+    empty.style.display = "block";
+    return;
+  }
+  empty.style.display = "none";
+
+  // 按天分组
+  const groups = {};
+  filtered.forEach(a => {
+    const day = (a.published_at || "").slice(0, 10);
+    if (!groups[day]) groups[day] = [];
+    groups[day].push(a);
+  });
+
+  let html = "";
+  for (const [day, items] of Object.entries(groups).sort((a,b) => b[0].localeCompare(a[0]))) {
+    html += `<div class="day-group"><div class="day-label">${formatDay(day)}</div>`;
+    items.forEach(a => {
+      const catClass = a.category === "精华" ? "featured"
+        : a.category === "教程" ? "tutorial" : "news";
+      const catLabel = a.category === "精华" ? "◆ 精华"
+        : a.category === "教程" ? "▷ 教程" : "○ 资讯";
+      html += `
+      <div class="card ${a.is_featured || a.category === '精华' ? 'featured' : ''}">
+        <div class="top-row">
+          <span class="source-tag">${a.source_icon || ''} ${esc(a.source)}</span>
+          <span class="cat-tag ${catClass}">${catLabel}</span>
+        </div>
+        <h3><a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.title)}</a></h3>
+        ${a.summary ? `<div class="summary">${esc(a.summary)}</div>` : ''}
+        <div class="bottom-row">
+          <span>${esc(a.author)} · ${formatTime(a.published_at)}</span>
+          <div class="tags">${(a.tags || []).slice(0, 3).map(t =>
+            `<span class="tag">${esc(t)}</span>`).join("")}</div>
+        </div>
+      </div>`;
+    });
+    html += `</div>`;
+  }
+  container.innerHTML = html;
+}
+
+// ---------- utils ----------
+
+function esc(s) {
+  if (!s) return "";
+  const d = document.createElement("div");
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+function formatTime(iso) {
+  if (!iso) return "";
+  const d = new Date(iso);
+  const diff = Date.now() - d;
+  if (diff < 36e5) return `${Math.floor(diff/6e4)} 分钟前`;
+  if (diff < 864e5) return `${Math.floor(diff/36e5)} 小时前`;
+  if (diff < 6048e5) return `${Math.floor(diff/864e5)} 天前`;
+  return d.toLocaleDateString("zh-CN");
+}
+
+function formatDay(iso) {
+  if (!iso) return "";
+  const d = new Date(iso + "T00:00:00");
+  const today = new Date(); today.setHours(0,0,0,0);
+  const yesterday = new Date(today - 86400000);
+  const thatDay = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  if (thatDay.getTime() === today.getTime()) return "TODAY";
+  if (thatDay.getTime() === yesterday.getTime()) return "YESTERDAY";
+  return d.toLocaleDateString("zh-CN", { month:"numeric", day:"numeric", weekday:"short" });
+}
+
+// ---------- events ----------
+
+document.getElementById("searchInput").addEventListener("input", renderAll);
+
+document.querySelectorAll(".cat-chip").forEach(chip => {
+  chip.addEventListener("click", () => {
+    document.querySelectorAll(".cat-chip").forEach(c => c.classList.remove("active"));
+    chip.classList.add("active");
+    activeCat = chip.dataset.cat;
+    renderAll();
+  });
+});
+
+loadData();
+</script>
+</body>
+</html>
