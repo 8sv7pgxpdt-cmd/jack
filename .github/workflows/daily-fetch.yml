@@ -1,10 +1,15 @@
 name: Daily Vibe Coding Fetch
 
 on:
+  push:
+    paths:
+      - "aggregator.py"
+      - "sources.json"
+      - "requirements.txt"
+      - ".github/workflows/daily-fetch.yml"
   schedule:
     # 北京时间每天早上 8:00 (UTC 0:00)
     - cron: "0 0 * * *"
-  # 也允许手动触发
   workflow_dispatch:
 
 jobs:
