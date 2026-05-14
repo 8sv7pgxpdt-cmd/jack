@@ -24,6 +24,7 @@ ROOT = Path(__file__).parent
 DATA_DIR = ROOT / "data"
 OUTPUT_FILE = DATA_DIR / "articles.json"
 CONFIG_FILE = ROOT / "sources.json"
+MANUAL_FILE = ROOT / "manual.json"
 
 # HTTP 请求头
 HEADERS = {
@@ -62,6 +63,47 @@ def load_config():
             "知乎": {"启用": False},
             "链接验证": {"验证B站视频": True, "验证其他链接": False},
         }
+
+
+# ========== 手动投稿 ==========
+
+def load_manual_articles():
+    """加载 manual.json 中手动添加的文章"""
+    if not MANUAL_FILE.exists():
+        return []
+    try:
+        raw = json.loads(MANUAL_FILE.read_text(encoding="utf-8"))
+    except Exception as e:
+        print(f"  [WARN] manual.json 解析失败: {e}")
+        return []
+
+    items = []
+    for entry in raw:
+        # 跳过说明和示例条目（key 以下划线开头）
+        if any(k.startswith("_") for k in entry.keys()):
+            continue
+        title = (entry.get("title") or "").strip()
+        url = (entry.get("url") or "").strip()
+        if not title or not url:
+            continue
+
+        is_featured = entry.get("category") == "精华"
+        summary = (entry.get("summary") or "")[:200]
+        items.append({
+            "id": make_id("manual", url),
+            "title": title,
+            "url": url,
+            "summary": summary,
+            "source": entry.get("source", "手动收录"),
+            "source_icon": entry.get("source_icon", "📌"),
+            "author": entry.get("author", ""),
+            "published_at": entry.get("published_at", now_iso()),
+            "fetched_at": now_iso(),
+            "tags": entry.get("tags", []),
+            "is_featured": is_featured,
+            "category": categorize(title, summary, is_featured),
+        })
+    return items
 
 
 # ========== 工具函数 ==========
@@ -506,6 +548,12 @@ def fetch_all():
             all_items.extend(items)
         except Exception as e:
             print(f"   ❌ {name}: {e}")
+
+    # 合并手动投稿
+    manual = load_manual_articles()
+    if manual:
+        print(f"\n📌 手动投稿: {len(manual)} 条")
+        all_items.extend(manual)
 
     # 去重
     seen = set()
