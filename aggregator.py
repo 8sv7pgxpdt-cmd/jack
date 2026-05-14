@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Vibe Coding 内容聚合器 v2
-- 多平台抓取（B站、个人博客、科技媒体、Hacker News）
-- 链接有效性验证
-- 自动分类标签（教程 / 资讯 / 精华）
-- 商业洞察内容覆盖
+Vibe Coding 内容聚合器 v3
+- 从 sources.json 读取订阅源配置，无需改代码即可增减源
+- 支持: B站、V2EX、掘金、GitHub、Hacker News、RSS 多源
+- 自动分类: 教程 / 资讯 / 精华
+- B站视频有效性验证
 """
 
 import json
@@ -17,10 +17,15 @@ from pathlib import Path
 import requests
 import feedparser
 
-# ---------- 配置 ----------
-DATA_DIR = Path(__file__).parent / "data"
-OUTPUT_FILE = DATA_DIR / "articles.json"
+# ========== 基础配置 ==========
 
+# 项目根目录
+ROOT = Path(__file__).parent
+DATA_DIR = ROOT / "data"
+OUTPUT_FILE = DATA_DIR / "articles.json"
+CONFIG_FILE = ROOT / "sources.json"
+
+# HTTP 请求头
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
                   "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -29,20 +34,45 @@ HEADERS = {
     "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
 }
 
+# B站专用请求头（缺少 Referer 会返回 412）
 BILIBILI_HEADERS = {
     **HEADERS,
     "Referer": "https://www.bilibili.com/",
     "Origin": "https://www.bilibili.com",
 }
 
+# 全局会话
 SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
 
-# ---------- 工具 ----------
 
-def fetch_json(url, params=None, **kwargs):
+# ========== 加载配置 ==========
+
+def load_config():
+    """加载 sources.json 配置文件"""
     try:
-        r = SESSION.get(url, params=params, timeout=15, **kwargs)
+        return json.loads(CONFIG_FILE.read_text(encoding="utf-8"))
+    except Exception as e:
+        print(f"[WARN] 无法加载 sources.json: {e}，使用默认配置")
+        return {
+            "搜索关键词": ["vibe coding", "AI编程"],
+            "RSS订阅源": [],
+            "V2EX节点": [],
+            "掘金": {"启用": False},
+            "知乎": {"启用": False},
+            "链接验证": {"验证B站视频": True, "验证其他链接": False},
+        }
+
+
+# ========== 工具函数 ==========
+
+def fetch_json(url, params=None, method="GET", json_data=None, **kwargs):
+    """安全请求 JSON API，失败返回 None（支持 GET/POST）"""
+    try:
+        if method == "POST":
+            r = SESSION.post(url, json=json_data, timeout=15, **kwargs)
+        else:
+            r = SESSION.get(url, params=params, timeout=15, **kwargs)
         r.raise_for_status()
         return r.json()
     except Exception as e:
@@ -51,18 +81,22 @@ def fetch_json(url, params=None, **kwargs):
 
 
 def make_id(source, raw_id):
+    """生成唯一文章 ID"""
     return hashlib.md5(f"{source}:{raw_id}".encode()).hexdigest()[:12]
 
 
 def clean_html(html):
+    """去除 HTML 标签"""
     return re.sub(r"<[^>]+>", "", html or "")
 
 
 def now_iso():
+    """当前时间 ISO 格式"""
     return datetime.now(timezone.utc).isoformat()
 
 
 def parse_date_loose(s):
+    """兼容多种日期格式"""
     if not s:
         return now_iso()
     for fmt in [
@@ -88,8 +122,9 @@ def parse_date_loose(s):
     return now_iso()
 
 
-# ---------- 分类标签 ----------
+# ========== 分类系统 ==========
 
+# 教程类关键词
 TUTORIAL_KW = [
     "教程", "tutorial", "guide", "入门", "指南", "怎么", "如何",
     "上手", "使用教程", "配置", "安装", "设置", "实战", "手把手",
@@ -98,6 +133,7 @@ TUTORIAL_KW = [
     "walkthrough", "how to", "上手教程", "学习", "笔记",
 ]
 
+# 资讯类关键词
 NEWS_KW = [
     "发布", "更新", "融资", "上线", "新品", "动态", "宣布", "最新",
     "news", "release", "launch", "收购", "投资", "趋势", "报告",
@@ -106,41 +142,43 @@ NEWS_KW = [
     "突破", "里程碑", "首次", "重磅", "独家",
 ]
 
+
 def categorize(title, summary, is_featured):
     """
     根据标题和摘要自动分类:
-    - 教程: 含教学、指南类关键词
-    - 资讯: 含行业动态、产品更新类关键词
-    - 精华: 高互动/高播放量内容（is_featured=True）
+    - 精华: 高互动/高播放量
+    - 教程: 含教学关键词
+    - 资讯: 含行业动态关键词
     """
     if is_featured:
         return "精华"
     text = f"{title} {summary}".lower()
     t_score = sum(1 for kw in TUTORIAL_KW if kw in text)
     n_score = sum(1 for kw in NEWS_KW if kw in text)
-    if t_score > n_score:
-        return "教程"
-    return "资讯"
+    return "教程" if t_score > n_score else "资讯"
 
 
-# ---------- 链接验证 ----------
+# ========== 链接验证 ==========
 
 def check_bilibili_video(aid):
-    """验证 B 站视频是否仍存在"""
+    """验证 B 站视频是否仍然存在"""
     try:
         data = fetch_json(
             f"https://api.bilibili.com/x/web-interface/view?aid={aid}",
             headers=BILIBILI_HEADERS,
         )
-        return data and data.get("code") == 0
+        return data is not None and data.get("code") == 0
     except Exception:
         return False
 
 
-def check_link_ok(url, source):
-    """快速检查链接是否可达（仅用于非 B 站链接）"""
-    if "bilibili" in source:
-        return True  # B 站链接在抓取时已验证
+def check_link_ok(url, source, config):
+    """根据配置决定是否验证链接"""
+    val_cfg = config.get("链接验证", {})
+    if "bilibili" in source.lower():
+        return True  # B 站在抓取时已验证
+    if not val_cfg.get("验证其他链接", False):
+        return True  # 不验证其他链接（国内网络外网超时）
     try:
         r = SESSION.head(url, timeout=8, allow_redirects=True)
         return r.status_code < 400
@@ -148,21 +186,18 @@ def check_link_ok(url, source):
         return False
 
 
-# ===================== 数据源 =====================
+# ==================== 数据源 ====================
 
-def fetch_bilibili():
-    """哔哩哔哩 - 搜索 AI 编程相关视频（含链接验证）"""
+def fetch_bilibili(config):
+    """哔哩哔哩 - 搜索 AI 编程视频（含链接验证）"""
     items = []
+    # 先访问首页获取 cookie（否则 API 返回 412）
     try:
         SESSION.get("https://www.bilibili.com/", timeout=10)
     except Exception:
         pass
 
-    keywords = [
-        "AI编程", "vibe coding", "Cursor编辑器", "Windsurf AI",
-        "Claude Code", "Copilot编程", "AI写代码", "AI 编程工具",
-        "AI编程教程", "AI辅助编程",
-    ]
+    keywords = config.get("搜索关键词", [])[:10]
     for kw in keywords:
         data = fetch_json(
             "https://api.bilibili.com/x/web-interface/search/type",
@@ -171,10 +206,12 @@ def fetch_bilibili():
         )
         if not data or data.get("code") != 0:
             continue
+
         for v in data.get("data", {}).get("result", [])[:8]:
             aid = v.get("aid")
+            # 验证视频是否仍有效
             if not check_bilibili_video(aid):
-                continue  # 视频已失效，跳过
+                continue
 
             pub_ts = v.get("pubdate")
             pub_date = (
@@ -203,8 +240,114 @@ def fetch_bilibili():
     return items
 
 
+def fetch_v2ex(config):
+    """V2EX - 抓取 AI/编程 节点的话题"""
+    items = []
+    nodes = [n for n in config.get("V2EX节点", []) if n.get("启用", True)]
+    for node in nodes:
+        node_name = node.get("节点名", "")
+        data = fetch_json(
+            "https://www.v2ex.com/api/topics/show.json",
+            params={"node_name": node_name, "p": 1},
+        )
+        if not data or not isinstance(data, list):
+            continue
+
+        for topic in data[:8]:
+            tid = topic.get("id")
+            title = topic.get("title", "")
+            # 只保留 AI/编程 相关内容
+            text = title.lower()
+            match_kw = [
+                "ai", "编程", "cursor", "vibe", "coding", "code", "copilot",
+                "claude", "gpt", "windsurf", "开发", "程序", "代码",
+                "工具", "agent", "自动化", "模型", "prompt",
+            ]
+            if not any(kw in text for kw in match_kw):
+                continue
+
+            created = topic.get("created")
+            pub_date = (
+                datetime.fromtimestamp(created, tz=timezone.utc).isoformat()
+                if created else now_iso()
+            )
+            is_featured = topic.get("replies", 0) > 50
+
+            items.append({
+                "id": make_id("v2ex", tid),
+                "title": title,
+                "url": f"https://www.v2ex.com/t/{tid}",
+                "summary": (topic.get("content", "") or "")[:200],
+                "source": f"V2EX · {node_name}",
+                "source_icon": "💬",
+                "author": topic.get("member", {}).get("username", "") if isinstance(topic.get("member"), dict) else "",
+                "published_at": pub_date,
+                "fetched_at": now_iso(),
+                "tags": [node_name],
+                "is_featured": is_featured,
+                "category": categorize(title, "", is_featured),
+            })
+        time.sleep(0.5)
+    return items
+
+
+def fetch_juejin(config):
+    """掘金 - 搜索 AI 编程相关文章"""
+    items = []
+    juejin_cfg = config.get("掘金", {})
+    if not juejin_cfg.get("启用", False):
+        return items
+
+    keywords = juejin_cfg.get("搜索关键词", [])[:5]
+    limit = juejin_cfg.get("每次抓取条数", 8)
+
+    for kw in keywords:
+        data = fetch_json(
+            "https://api.juejin.cn/search_api/v1/search",
+            method="POST",
+            json_data={
+                "query": kw,
+                "limit": limit,
+                "sort_type": 0,
+            },
+        )
+        if not data or data.get("err_no") != 0:
+            continue
+
+        for item in data.get("data", [])[:limit]:
+            article = item.get("article_info") or item.get("article") or {}
+            article_id = article.get("article_id", "")
+            title = article.get("title", "")
+            summary = article.get("brief_content", "")
+            author_info = item.get("author_user_info", {}) or {}
+            ctime = article.get("ctime")
+            pub_date = (
+                datetime.fromtimestamp(int(ctime), tz=timezone.utc).isoformat()
+                if ctime else now_iso()
+            )
+            digg = article.get("digg_count", 0)
+            is_featured = digg > 200
+
+            items.append({
+                "id": make_id("juejin", article_id),
+                "title": title,
+                "url": f"https://juejin.cn/post/{article_id}",
+                "summary": (summary or "")[:200],
+                "source": "掘金",
+                "source_icon": "🥇",
+                "author": author_info.get("user_name", ""),
+                "published_at": pub_date,
+                "fetched_at": now_iso(),
+                "tags": [kw],
+                "is_featured": is_featured,
+                "category": categorize(title, summary or "", is_featured),
+            })
+        time.sleep(0.6)
+    return items
+
+
 def fetch_hackernews():
-    """Hacker News - AI 编程相关讨论"""
+    """Hacker News - AI 编程相关外网讨论"""
     items = []
     for kw in ["vibe coding", "AI coding tool", "cursor IDE", "Claude Code",
                "Windsurf AI", "Copilot"]:
@@ -238,16 +381,12 @@ def fetch_hackernews():
     return items
 
 
-def fetch_rss():
-    """RSS 源 - 科技媒体 + 个人技术博客"""
+def fetch_rss(config):
+    """RSS 多源抓取 - 从 sources.json 读取订阅列表"""
     feeds = [
-        # 科技媒体
-        ("少数派", "https://sspai.com/feed"),
-        ("量子位", "https://www.qbitai.com/feed"),
-        ("36氪", "https://36kr.com/feed"),
-        ("虎嗅", "https://www.huxiu.com/rss/0.xml"),
-        # 个人博客/技术大佬
-        ("阮一峰的网络日志", "https://feeds.feedburner.com/ruanyifeng"),
+        (f["名称"], f["地址"])
+        for f in config.get("RSS订阅源", [])
+        if f.get("启用", True)
     ]
     items = []
     for source_name, url in feeds:
@@ -261,7 +400,7 @@ def fetch_rss():
                 # 筛选 AI 编程 / 商业洞察相关内容
                 text = f"{title} {summary}".lower()
                 match_kw = [
-                    # AI 编程
+                    # AI 编程工具
                     "vibe cod", "ai cod", "cursor", "windsurf", "claude code",
                     "copilot", "ai编程", "ai写代码", "ai ide", "ai 编程",
                     "ai coding", "自然语言编程", "ai程序员", "ai开发工具",
@@ -280,7 +419,6 @@ def fetch_rss():
                 if not any(kw in text for kw in match_kw):
                     continue
 
-                is_featured = False
                 items.append({
                     "id": make_id("rss", entry.get("id", link)),
                     "title": title,
@@ -294,8 +432,8 @@ def fetch_rss():
                     ),
                     "fetched_at": now_iso(),
                     "tags": [],
-                    "is_featured": is_featured,
-                    "category": categorize(title, summary, is_featured),
+                    "is_featured": False,
+                    "category": categorize(title, summary, False),
                 })
         except Exception as e:
             print(f"  [WARN] RSS {source_name}: {e}")
@@ -303,26 +441,15 @@ def fetch_rss():
     return items
 
 
-def fetch_github_chinese():
-    """GitHub - 搜索中文 AI 编程工具（中文 README 优先）"""
+def fetch_github():
+    """GitHub - 搜索中文 AI 编程工具仓库"""
     items = []
-    queries = ["vibe coding", "AI编程工具", "cursor", "AI写代码"]
-    for q in queries[:3]:
+    for q in ["vibe coding", "AI编程工具", "AI写代码"]:
+        # 优先搜中文
         data = fetch_json(
             "https://api.github.com/search/repositories",
-            params={
-                "q": q,
-                "sort": "updated",
-                "per_page": 8,
-                "language": "zh",
-            },
+            params={"q": q, "sort": "updated", "per_page": 6},
         )
-        if not data:
-            # 降级：不限语言
-            data = fetch_json(
-                "https://api.github.com/search/repositories",
-                params={"q": q, "sort": "stars", "per_page": 5},
-            )
         if not data:
             continue
         for repo in data.get("items", [])[:6]:
@@ -349,20 +476,26 @@ def fetch_github_chinese():
     return items
 
 
-# ===================== 主流程 =====================
+# ==================== 主流程 ====================
 
 def fetch_all():
+    """执行所有数据源的抓取"""
+    config = load_config()
     all_items = []
 
     print("=" * 50)
     print(f"[{datetime.now():%Y-%m-%d %H:%M:%S}] 开始抓取...")
+    print(f"配置文件: {CONFIG_FILE}")
     print("=" * 50)
 
+    # 定义所有数据源（名称, 函数, 是否传 config）
     sources = [
-        ("哔哩哔哩", fetch_bilibili),
+        ("哔哩哔哩", lambda: fetch_bilibili(config)),
+        ("V2EX", lambda: fetch_v2ex(config)),
+        ("掘金", lambda: fetch_juejin(config)),
         ("Hacker News", fetch_hackernews),
-        ("RSS + 博客", fetch_rss),
-        ("GitHub", fetch_github_chinese),
+        ("RSS 订阅", lambda: fetch_rss(config)),
+        ("GitHub", fetch_github),
     ]
 
     for name, func in sources:
@@ -382,33 +515,46 @@ def fetch_all():
             seen.add(item["id"])
             unique.append(item)
 
-    # 链接验证（跳过已在抓取时验证的 B 站）
-    print("\n🔗 验证链接有效性...")
-    valid = [i for i in unique if check_link_ok(i["url"], i["source"])]
-    dead_count = len(unique) - len(valid)
-    if dead_count:
-        print(f"   已过滤 {dead_count} 条失效链接")
+    # 链接验证
+    val_cfg = config.get("链接验证", {})
+    if val_cfg.get("验证B站视频", True) or val_cfg.get("验证其他链接", False):
+        print("\n🔗 验证链接有效性...")
+        valid = [i for i in unique if check_link_ok(i["url"], i["source"], config)]
+        dead_count = len(unique) - len(valid)
+        if dead_count:
+            print(f"   已过滤 {dead_count} 条失效链接")
+    else:
+        valid = unique
+        print("\n⏭️  跳过链接验证（见 sources.json 配置）")
 
     # 按时间倒序
     valid.sort(key=lambda x: x["published_at"], reverse=True)
 
     # 统计
     cats = {"教程": 0, "资讯": 0, "精华": 0}
+    sources_count = {}
     for i in valid:
         cats[i["category"]] = cats.get(i["category"], 0) + 1
+        src = i["source"]
+        sources_count[src] = sources_count.get(src, 0) + 1
+
     print(f"\n📊 总计: {len(valid)} 条 | 教程: {cats['教程']} | 资讯: {cats['资讯']} | 精华: {cats['精华']}")
+    for src, cnt in sorted(sources_count.items(), key=lambda x: -x[1]):
+        print(f"   {src}: {cnt} 条")
 
     result = {
         "updated_at": now_iso(),
         "total": len(valid),
         "categories": cats,
+        "sources": sources_count,
         "articles": valid,
     }
 
-    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    # 输出到 data/ 和 web/ 两个位置
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
     json_str = json.dumps(result, ensure_ascii=False, indent=2)
     OUTPUT_FILE.write_text(json_str)
-    (DATA_DIR.parent / "web" / "articles.json").write_text(json_str)
+    (ROOT / "web" / "articles.json").write_text(json_str)
 
     print(f"\n💾 已保存到 {OUTPUT_FILE}")
     return result

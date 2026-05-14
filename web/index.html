@@ -289,7 +289,7 @@
 <div class="header">
   <h1>VIBE<span class="dot"></span>CODING</h1>
   <div class="update-badge">
-    <span class="pulse"></span><span id="updateTime">加载中...</span>
+    <span class="pulse"></span><span id="updateTime">正在加载...</span>
   </div>
 </div>
 
@@ -308,12 +308,12 @@
   <div class="timeline" id="timeline"></div>
   <div class="empty" id="empty" style="display:none">
     <div class="icon">&#x25A1;</div>
-    <p>暂无内容，请先运行抓取脚本</p>
+    <p>暂无内容，请运行抓取脚本更新数据</p>
   </div>
 
 </div>
 
-<div class="footer">POWERED BY PYTHON + GITHUB ACTIONS</div>
+<div class="footer">由 Python + GitHub Actions 驱动 · 每日自动更新</div>
 
 <script>
 const DATA_URL = "articles.json";
@@ -434,8 +434,8 @@ function formatDay(iso) {
   const today = new Date(); today.setHours(0,0,0,0);
   const yesterday = new Date(today - 86400000);
   const thatDay = new Date(d.getFullYear(), d.getMonth(), d.getDate());
-  if (thatDay.getTime() === today.getTime()) return "TODAY";
-  if (thatDay.getTime() === yesterday.getTime()) return "YESTERDAY";
+  if (thatDay.getTime() === today.getTime()) return "今天";
+  if (thatDay.getTime() === yesterday.getTime()) return "昨天";
   return d.toLocaleDateString("zh-CN", { month:"numeric", day:"numeric", weekday:"short" });
 }
 

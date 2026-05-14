@@ -1,0 +1,49 @@
+{
+  "_说明": "编辑此文件即可增减订阅源，无需修改 Python 代码。改完后下次抓取自动生效。",
+
+  "搜索关键词": [
+    "vibe coding", "AI编程", "AI写代码", "Cursor编辑器",
+    "Windsurf AI", "Claude Code", "Copilot编程",
+    "AI编程工具", "AI辅助编程", "自然语言编程",
+    "AI编程教程", "AI开发", "AI coding"
+  ],
+
+  "RSS订阅源": [
+    {"名称": "少数派", "地址": "https://sspai.com/feed", "启用": true},
+    {"名称": "量子位", "地址": "https://www.qbitai.com/feed", "启用": true},
+    {"名称": "36氪", "地址": "https://36kr.com/feed", "启用": true},
+    {"名称": "虎嗅", "地址": "https://www.huxiu.com/rss/0.xml", "启用": true},
+    {"名称": "阮一峰的网络日志", "地址": "https://feeds.feedburner.com/ruanyifeng", "启用": true},
+    {"名称": "InfoQ中文", "地址": "https://www.infoq.cn/feed", "启用": true},
+    {"名称": "OSCHINA博客", "地址": "https://www.oschina.net/blog/rss", "启用": true},
+    {"名称": "CSDN AI", "地址": "https://blog.csdn.net/nav/ai/rss", "启用": true},
+    {"名称": "爱范儿", "地址": "https://www.ifanr.com/feed", "启用": false},
+    {"名称": "PingWest", "地址": "https://www.pingwest.com/feed", "启用": false},
+    {"名称": "雷锋网", "地址": "https://www.leiphone.com/feed", "启用": false}
+  ],
+
+  "V2EX节点": [
+    {"节点名": "ai", "说明": "AI讨论（需外网）", "启用": false},
+    {"节点名": "programming", "说明": "编程讨论（需外网）", "启用": false}
+  ],
+
+  "掘金": {
+    "_说明": "掘金API需要登录鉴权，暂不可用",
+    "启用": false,
+    "搜索关键词": [],
+    "每次抓取条数": 0
+  },
+
+  "知乎": {
+    "启用": false,
+    "_说明": "知乎反爬严格，需要时再尝试",
+    "搜索关键词": [],
+    "每次抓取条数": 0
+  },
+
+  "链接验证": {
+    "验证B站视频": true,
+    "验证其他链接": false,
+    "_说明": "国内网络访问 GitHub 等外网容易超时，只验证B站即可"
+  }
+}
