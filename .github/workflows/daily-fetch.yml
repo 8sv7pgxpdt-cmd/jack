@@ -10,8 +10,8 @@ on:
       - "web/**"
       - ".github/workflows/**"
   schedule:
-    # 北京时间每天早上 8:00 (UTC 0:00)
-    - cron: "0 0 * * *"
+    # 每 6 小时抓一次（北京时间 2:00 / 8:00 / 14:00 / 20:00）
+    - cron: "0 2,8,14,20 * * *"
   workflow_dispatch:
 
 jobs:
