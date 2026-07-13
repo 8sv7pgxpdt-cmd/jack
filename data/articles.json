@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-07-13T16:24:03.452365+00:00",
-  "total": 137,
+  "updated_at": "2026-07-13T20:52:24.103825+00:00",
+  "total": 135,
   "categories": {
-    "教程": 30,
-    "资讯": 64,
-    "精华": 43
+    "教程": 32,
+    "资讯": 59,
+    "精华": 44
   },
   "sources": {
     "GitHub": 18,
     "36氪": 3,
-    "哔哩哔哩": 66,
+    "哔哩哔哩": 64,
     "量子位": 2,
     "爱范儿": 2,
     "Product Hunt": 3,
@@ -20,15 +20,31 @@
   },
   "articles": [
     {
-      "id": "d144c52c0129",
-      "title": "ApartsinProjects/DiscoveryAI",
-      "url": "https://github.com/ApartsinProjects/DiscoveryAI",
-      "summary": "Building Discovery AI: From Vibe Coding to Autonomous Science — Hands-On AI Science Series, Volume 7",
+      "id": "b5c0493b054d",
+      "title": "Yueyuyu/ai-frontier-radar",
+      "url": "https://github.com/Yueyuyu/ai-frontier-radar",
+      "summary": "开源 AI 前沿情报雷达，追踪模型、AI 编程工具、Agent、Skill/插件、榜单变化与发布信号。",
       "source": "GitHub",
       "source_icon": "🐙",
-      "author": "ApartsinProjects",
-      "published_at": "2026-07-13T16:23:38Z",
-      "fetched_at": "2026-07-13T16:23:56.905839+00:00",
+      "author": "Yueyuyu",
+      "published_at": "2026-07-13T20:52:19Z",
+      "fetched_at": "2026-07-13T20:52:19.796829+00:00",
+      "tags": [
+        "AI编程工具"
+      ],
+      "is_featured": false,
+      "category": "资讯"
+    },
+    {
+      "id": "d9afcfd1f671",
+      "title": "anabkl/Sahtek.tech",
+      "url": "https://github.com/anabkl/Sahtek.tech",
+      "summary": "AI-Powered Breast Cancer Awareness & Self-Checking API - Vibe Coding Hackathon 2026.",
+      "source": "GitHub",
+      "source_icon": "🐙",
+      "author": "anabkl",
+      "published_at": "2026-07-13T20:52:02Z",
+      "fetched_at": "2026-07-13T20:52:17.541585+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -36,63 +52,94 @@
       "category": "资讯"
     },
     {
-      "id": "f7804fdf0b7e",
-      "title": "kaindrakonis/vibedev",
-      "url": "https://github.com/kaindrakonis/vibedev",
-      "summary": "📊 Analyze AI coding assistant usage, costs, and productivity with vibedev's interactive tools and insights for better decision-making.",
+      "id": "5cc8782643ef",
+      "title": "myname-is-core/vibe-coding-starter-pack",
+      "url": "https://github.com/myname-is-core/vibe-coding-starter-pack",
+      "summary": "2026 Guide: Build Apps Without Code – Vibe Coding Tools for Dummies New",
       "source": "GitHub",
       "source_icon": "🐙",
-      "author": "kaindrakonis",
-      "published_at": "2026-07-13T16:23:10Z",
-      "fetched_at": "2026-07-13T16:23:56.905905+00:00",
+      "author": "myname-is-core",
+      "published_at": "2026-07-13T20:51:27Z",
+      "fetched_at": "2026-07-13T20:52:17.541604+00:00",
       "tags": [
-        "agents",
+        "3d-pose-estimation",
         "ai",
-        "analytics",
-        "claude",
-        "cli",
+        "ai-coding",
+        "component-library",
+        "cross-platform",
         "vibe coding"
       ],
       "is_featured": false,
       "category": "资讯"
     },
     {
-      "id": "e6c13b8b5b10",
-      "title": "openaxcloud/vibecore",
-      "url": "https://github.com/openaxcloud/vibecore",
-      "summary": "E-Code — build, ship and scale full-stack apps with AI agents",
+      "id": "e31947065e7b",
+      "title": "dilu1260-gif/vibe-coder",
+      "url": "https://github.com/dilu1260-gif/vibe-coder",
+      "summary": "A vibe coding software ",
       "source": "GitHub",
       "source_icon": "🐙",
-      "author": "openaxcloud",
-      "published_at": "2026-07-13T16:23:02Z",
-      "fetched_at": "2026-07-13T16:23:56.905873+00:00",
+      "author": "dilu1260-gif",
+      "published_at": "2026-07-13T20:51:01Z",
+      "fetched_at": "2026-07-13T20:52:17.541621+00:00",
+      "tags": [
+        "vibe coding"
+      ],
+      "is_featured": false,
+      "category": "资讯"
+    },
+    {
+      "id": "280607f1c954",
+      "title": "AI-Colleagues/orcheo",
+      "url": "https://github.com/AI-Colleagues/orcheo",
+      "summary": "A full-stack, agentic workflow programming platform. Built for vibe-coding and with vibe-coding.",
+      "source": "GitHub",
+      "source_icon": "🐙",
+      "author": "AI-Colleagues",
+      "published_at": "2026-07-13T20:50:45Z",
+      "fetched_at": "2026-07-13T20:52:17.541642+00:00",
       "tags": [
         "ai",
-        "ai-agents",
-        "e-code",
-        "ide",
-        "web-development",
-        "vibe coding"
-      ],
-      "is_featured": false,
-      "category": "资讯"
-    },
-    {
-      "id": "9719e48f4bb2",
-      "title": "rjwalters/vibesql",
-      "url": "https://github.com/rjwalters/vibesql",
-      "summary": "Vibe-coded NIST compatible database in Rust",
-      "source": "GitHub",
-      "source_icon": "🐙",
-      "author": "rjwalters",
-      "published_at": "2026-07-13T16:22:39Z",
-      "fetched_at": "2026-07-13T16:23:56.905892+00:00",
-      "tags": [
-        "ai-development",
-        "rust",
-        "sql",
+        "ai-agent",
         "vibe-coding",
-        "wasm",
+        "workflow-automation",
+        "vibe coding"
+      ],
+      "is_featured": false,
+      "category": "资讯"
+    },
+    {
+      "id": "944c472db702",
+      "title": "tykimos/ai-whatchelin",
+      "url": "https://github.com/tykimos/ai-whatchelin",
+      "summary": "AI WhatChelin? — The Ultimate AI Tool Comparison Guide for Vibe Coders, Creators & Office Workers",
+      "source": "GitHub",
+      "source_icon": "🐙",
+      "author": "tykimos",
+      "published_at": "2026-07-13T20:50:41Z",
+      "fetched_at": "2026-07-13T20:52:17.541629+00:00",
+      "tags": [
+        "vibe coding"
+      ],
+      "is_featured": false,
+      "category": "教程"
+    },
+    {
+      "id": "e466412de3a2",
+      "title": "master5d/viberuler",
+      "url": "https://github.com/master5d/viberuler",
+      "summary": "The benchmark for vibe coders. npx viberuler — tokens per dollar, LoC shipped, meme ranks, global leaderboard.",
+      "source": "GitHub",
+      "source_icon": "🐙",
+      "author": "master5d",
+      "published_at": "2026-07-13T20:50:27Z",
+      "fetched_at": "2026-07-13T20:52:17.541650+00:00",
+      "tags": [
+        "ai",
+        "benchmark",
+        "cli",
+        "developer-tools",
+        "vibe-coding",
         "vibe coding"
       ],
       "is_featured": false,
@@ -106,8 +153,8 @@
       "source": "36氪",
       "source_icon": "📰",
       "author": "36氪",
-      "published_at": "2026-07-13T16:21:38.843231+00:00",
-      "fetched_at": "2026-07-13T16:21:38.843234+00:00",
+      "published_at": "2026-07-13T20:50:00.530818+00:00",
+      "fetched_at": "2026-07-13T20:50:00.530820+00:00",
       "tags": [],
       "is_featured": false,
       "category": "资讯"
@@ -120,8 +167,8 @@
       "source": "36氪",
       "source_icon": "📰",
       "author": "36氪",
-      "published_at": "2026-07-13T16:21:38.842477+00:00",
-      "fetched_at": "2026-07-13T16:21:38.842481+00:00",
+      "published_at": "2026-07-13T20:50:00.530168+00:00",
+      "fetched_at": "2026-07-13T20:50:00.530171+00:00",
       "tags": [],
       "is_featured": false,
       "category": "资讯"
@@ -134,9 +181,25 @@
       "source": "36氪",
       "source_icon": "📰",
       "author": "36氪",
-      "published_at": "2026-07-13T16:21:38.841694+00:00",
-      "fetched_at": "2026-07-13T16:21:38.841705+00:00",
+      "published_at": "2026-07-13T20:50:00.529492+00:00",
+      "fetched_at": "2026-07-13T20:50:00.529504+00:00",
       "tags": [],
+      "is_featured": false,
+      "category": "资讯"
+    },
+    {
+      "id": "1268bc6f65b0",
+      "title": "xu756/TrendRadar",
+      "url": "https://github.com/xu756/TrendRadar",
+      "summary": "🎯 告别信息过载，AI 助你看懂新闻资讯热点，简单的舆情监控分析 - 多平台热点聚合+基于 MCP 的AI分析工具。监控35个平台（抖音、知乎、B站、华尔街见闻、财联社等），智能筛选+自动推送+AI对话分析（用自然语言深度挖掘新闻：趋势追踪、情感分析、相似检索等13种工具）。支持企业微信/飞书/钉钉/Telegram/邮件/ntfy推送，30秒网页部署，1分钟手机通知，无需编程。支持Docker部",
+      "source": "GitHub",
+      "source_icon": "🐙",
+      "author": "xu756",
+      "published_at": "2026-07-13T20:49:54Z",
+      "fetched_at": "2026-07-13T20:52:19.796778+00:00",
+      "tags": [
+        "AI编程工具"
+      ],
       "is_featured": false,
       "category": "资讯"
     },
@@ -148,8 +211,8 @@
       "source": "哔哩哔哩",
       "source_icon": "📺",
       "author": "我猫叫灰灰",
-      "published_at": "2026-07-13T16:21:27.519528+00:00",
-      "fetched_at": "2026-07-13T16:21:27.519569+00:00",
+      "published_at": "2026-07-13T20:49:48.878456+00:00",
+      "fetched_at": "2026-07-13T20:49:48.878495+00:00",
       "tags": [
         "自然语言编程"
       ],
@@ -164,29 +227,13 @@
       "source": "哔哩哔哩",
       "source_icon": "📺",
       "author": "程序员鱼皮",
-      "published_at": "2026-07-13T16:21:20.544651+00:00",
-      "fetched_at": "2026-07-13T16:21:20.544692+00:00",
+      "published_at": "2026-07-13T20:49:42.475763+00:00",
+      "fetched_at": "2026-07-13T20:49:42.475801+00:00",
       "tags": [
         "AI编程工具"
       ],
       "is_featured": true,
       "category": "精华"
-    },
-    {
-      "id": "e2a32d1ebae7",
-      "title": "AI入门编程不再难，让Copilot带你飞",
-      "url": "https://www.bilibili.com/video/av5678",
-      "summary": "",
-      "source": "哔哩哔哩",
-      "source_icon": "📺",
-      "author": "博为峰",
-      "published_at": "2026-07-13T16:21:17.226805+00:00",
-      "fetched_at": "2026-07-13T16:21:17.226845+00:00",
-      "tags": [
-        "Copilot编程"
-      ],
-      "is_featured": false,
-      "category": "教程"
     },
     {
       "id": "7e8dd8d304cd",
@@ -196,8 +243,8 @@
       "source": "哔哩哔哩",
       "source_icon": "📺",
       "author": "杭州黄老师",
-      "published_at": "2026-07-13T16:21:10.497988+00:00",
-      "fetched_at": "2026-07-13T16:21:10.498033+00:00",
+      "published_at": "2026-07-13T20:49:32.801046+00:00",
+      "fetched_at": "2026-07-13T20:49:32.801117+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -212,8 +259,8 @@
       "source": "哔哩哔哩",
       "source_icon": "📺",
       "author": "林粒粒呀",
-      "published_at": "2026-07-13T16:21:01.021430+00:00",
-      "fetched_at": "2026-07-13T16:21:01.021476+00:00",
+      "published_at": "2026-07-13T20:49:23.674394+00:00",
+      "fetched_at": "2026-07-13T20:49:23.674431+00:00",
       "tags": [
         "AI编程"
       ],
@@ -228,71 +275,13 @@
       "source": "哔哩哔哩",
       "source_icon": "📺",
       "author": "西瓜讲大模型",
-      "published_at": "2026-07-13T16:20:57.180488+00:00",
-      "fetched_at": "2026-07-13T16:20:57.180521+00:00",
+      "published_at": "2026-07-13T20:49:19.792810+00:00",
+      "fetched_at": "2026-07-13T20:49:19.792846+00:00",
       "tags": [
         "vibe coding"
       ],
       "is_featured": false,
       "category": "教程"
-    },
-    {
-      "id": "3e4cdc85c99e",
-      "title": "patrickreed22/vibe-kanban",
-      "url": "https://github.com/patrickreed22/vibe-kanban",
-      "summary": "🛠️ Boost your workflow with Vibe Kanban, the tool that enhances productivity by optimizing interaction with coding agents like Claude Code and Codex.",
-      "source": "GitHub",
-      "source_icon": "🐙",
-      "author": "patrickreed22",
-      "published_at": "2026-07-13T16:20:17Z",
-      "fetched_at": "2026-07-13T16:23:56.905929+00:00",
-      "tags": [
-        "agent",
-        "agents",
-        "ai-agents",
-        "ai-coding",
-        "automagik",
-        "vibe coding"
-      ],
-      "is_featured": false,
-      "category": "资讯"
-    },
-    {
-      "id": "6d81fd4b705b",
-      "title": "amyleesterling/kids-who-vibecode",
-      "url": "https://github.com/amyleesterling/kids-who-vibecode",
-      "summary": "fun challenges for kids to vibe code this summer!",
-      "source": "GitHub",
-      "source_icon": "🐙",
-      "author": "amyleesterling",
-      "published_at": "2026-07-13T16:19:06Z",
-      "fetched_at": "2026-07-13T16:23:56.905952+00:00",
-      "tags": [
-        "vibe coding"
-      ],
-      "is_featured": false,
-      "category": "资讯"
-    },
-    {
-      "id": "5179c56b231e",
-      "title": "huiliyi37/Tianshu-Tui",
-      "url": "https://github.com/huiliyi37/Tianshu-Tui",
-      "summary": "天枢 (Tianshu) 是一个全功能、高性能的终端编程智能体运行时（TUI）。它跳出了传统 AI 编程助手把大模型仅当成“工具”的局限，基于认知虚拟机 (CVM)、自感知层和信息素（Stigmergy）自衰减记忆构建，让 AI 成为有独立判断与认知防护的“开发伙伴”。同时针对 DeepSeek V4 做了前缀缓存工程优化（长会话实测稳态命中率 95–99%）",
-      "source": "GitHub",
-      "source_icon": "🐙",
-      "author": "huiliyi37",
-      "published_at": "2026-07-13T16:04:04Z",
-      "fetched_at": "2026-07-13T16:23:59.164957+00:00",
-      "tags": [
-        "ai-agent",
-        "coding-agent",
-        "context-management",
-        "deepseek",
-        "prefix-cache",
-        "AI编程工具"
-      ],
-      "is_featured": false,
-      "category": "资讯"
     },
     {
       "id": "16665d0c79bf",
@@ -302,8 +291,8 @@
       "source": "GitHub",
       "source_icon": "🐙",
       "author": "lxc512157407",
-      "published_at": "2026-07-13T15:58:09Z",
-      "fetched_at": "2026-07-13T16:24:01.451538+00:00",
+      "published_at": "2026-07-13T20:48:38Z",
+      "fetched_at": "2026-07-13T20:52:22.103116+00:00",
       "tags": [
         "AI写代码"
       ],
@@ -311,44 +300,20 @@
       "category": "资讯"
     },
     {
-      "id": "d062fbafaafa",
-      "title": "Jia-520-only/Miya",
-      "url": "https://github.com/Jia-520-only/Miya",
-      "summary": " 弥娅（Miya）——大脑·手·面三层架构的 AI 虚拟化身。守护进程承载人格、 记忆与 APV2.1 白箱认知引擎；Claude Code Engine 作为她的肢体执行文件 操作与代码编写；Electron 桌面应用呈现 Live2D 形象。六层记忆（对话→ 短期→长期→语义→知识→置顶）让她真正记住你。QQ/Telegram/Discord/飞书 全平台在线，20+ 种 YAML 人格支持运",
+      "id": "e8e16c1de90d",
+      "title": "oumingzong/TrendRadar",
+      "url": "https://github.com/oumingzong/TrendRadar",
+      "summary": "🎯 告别信息过载，AI 助你看懂新闻资讯热点，简单的舆情监控分析 - 多平台热点聚合+基于 MCP 的AI分析工具。监控35个平台（抖音、知乎、B站、华尔街见闻、财联社等），智能筛选+自动推送+AI对话分析（用自然语言深度挖掘新闻：趋势追踪、情感分析、相似检索等13种工具）。支持企业微信/飞书/钉钉/Telegram/邮件/ntfy推送，30秒网页部署，1分钟手机通知，无需编程。支持Docker部",
       "source": "GitHub",
       "source_icon": "🐙",
-      "author": "Jia-520-only",
-      "published_at": "2026-07-13T15:56:36Z",
-      "fetched_at": "2026-07-13T16:24:01.451579+00:00",
+      "author": "oumingzong",
+      "published_at": "2026-07-13T20:32:15Z",
+      "fetched_at": "2026-07-13T20:52:19.796812+00:00",
       "tags": [
-        "agent",
-        "bot",
-        "wife",
-        "AI写代码"
-      ],
-      "is_featured": false,
-      "category": "资讯"
-    },
-    {
-      "id": "ad31decc7e76",
-      "title": "mowei-ie/router-vpn",
-      "url": "https://github.com/mowei-ie/router-vpn",
-      "summary": "AI 编程实战（Cursor/ChatGPT）+ 全平台网络工具教程：路由器/软路由/多端配置",
-      "source": "GitHub",
-      "source_icon": "🐙",
-      "author": "mowei-ie",
-      "published_at": "2026-07-13T15:51:19Z",
-      "fetched_at": "2026-07-13T16:23:59.164992+00:00",
-      "tags": [
-        "ai-tools",
-        "chatgpt",
-        "cursor",
-        "ficlash",
-        "istore",
         "AI编程工具"
       ],
       "is_featured": false,
-      "category": "教程"
+      "category": "资讯"
     },
     {
       "id": "ccd7b81c45ce",
@@ -358,8 +323,8 @@
       "source": "GitHub",
       "source_icon": "🐙",
       "author": "Jzoooooon",
-      "published_at": "2026-07-13T15:48:12Z",
-      "fetched_at": "2026-07-13T16:23:59.165009+00:00",
+      "published_at": "2026-07-13T20:21:24Z",
+      "fetched_at": "2026-07-13T20:52:19.796841+00:00",
       "tags": [
         "AI编程工具"
       ],
@@ -374,10 +339,66 @@
       "source": "GitHub",
       "source_icon": "🐙",
       "author": "killy990",
-      "published_at": "2026-07-13T15:47:17Z",
-      "fetched_at": "2026-07-13T16:23:59.165038+00:00",
+      "published_at": "2026-07-13T20:19:51Z",
+      "fetched_at": "2026-07-13T20:52:19.796862+00:00",
       "tags": [
         "AI编程工具"
+      ],
+      "is_featured": false,
+      "category": "资讯"
+    },
+    {
+      "id": "28a972143687",
+      "title": "bobkingdom/TrendRadar",
+      "url": "https://github.com/bobkingdom/TrendRadar",
+      "summary": "🎯 告别信息过载，AI 助你看懂新闻资讯热点，简单的舆情监控分析 - 多平台热点聚合+基于 MCP 的AI分析工具。监控35个平台（抖音、知乎、B站、华尔街见闻、财联社等），智能筛选+自动推送+AI对话分析（用自然语言深度挖掘新闻：趋势追踪、情感分析、相似检索等13种工具）。支持企业微信/飞书/钉钉/Telegram/邮件/ntfy推送，30秒网页部署，1分钟手机通知，无需编程。支持Docker部",
+      "source": "GitHub",
+      "source_icon": "🐙",
+      "author": "bobkingdom",
+      "published_at": "2026-07-13T20:10:38Z",
+      "fetched_at": "2026-07-13T20:52:19.796879+00:00",
+      "tags": [
+        "AI编程工具"
+      ],
+      "is_featured": false,
+      "category": "资讯"
+    },
+    {
+      "id": "ddbd690e1d1c",
+      "title": "dsphper/lanhu-mcp",
+      "url": "https://github.com/dsphper/lanhu-mcp",
+      "summary": "⚡ 需求分析效率提升 200%！全球首个为 AI 编程时代设计的团队协作 MCP 服务器，自动分析需求自动编写前后端代码，下载切图",
+      "source": "GitHub",
+      "source_icon": "🐙",
+      "author": "dsphper",
+      "published_at": "2026-07-13T17:52:40Z",
+      "fetched_at": "2026-07-13T20:52:22.103151+00:00",
+      "tags": [
+        "ai",
+        "ai-agents",
+        "ai-coding",
+        "ai-tools",
+        "mcp",
+        "AI写代码"
+      ],
+      "is_featured": true,
+      "category": "精华"
+    },
+    {
+      "id": "d062fbafaafa",
+      "title": "Jia-520-only/Miya",
+      "url": "https://github.com/Jia-520-only/Miya",
+      "summary": " 弥娅（Miya）——大脑·手·面三层架构的 AI 虚拟化身。守护进程承载人格、 记忆与 APV2.1 白箱认知引擎；Claude Code Engine 作为她的肢体执行文件 操作与代码编写；Electron 桌面应用呈现 Live2D 形象。六层记忆（对话→ 短期→长期→语义→知识→置顶）让她真正记住你。QQ/Telegram/Discord/飞书 全平台在线，20+ 种 YAML 人格支持运",
+      "source": "GitHub",
+      "source_icon": "🐙",
+      "author": "Jia-520-only",
+      "published_at": "2026-07-13T15:56:36Z",
+      "fetched_at": "2026-07-13T20:52:22.103156+00:00",
+      "tags": [
+        "agent",
+        "bot",
+        "wife",
+        "AI写代码"
       ],
       "is_featured": false,
       "category": "资讯"
@@ -391,25 +412,9 @@
       "source_icon": "🐙",
       "author": "cigery-useio",
       "published_at": "2026-07-13T15:34:43Z",
-      "fetched_at": "2026-07-13T16:24:01.451605+00:00",
+      "fetched_at": "2026-07-13T20:52:22.103175+00:00",
       "tags": [
         "AI写代码"
-      ],
-      "is_featured": false,
-      "category": "资讯"
-    },
-    {
-      "id": "b5c0493b054d",
-      "title": "Yueyuyu/ai-frontier-radar",
-      "url": "https://github.com/Yueyuyu/ai-frontier-radar",
-      "summary": "开源 AI 前沿情报雷达，追踪模型、AI 编程工具、Agent、Skill/插件、榜单变化与发布信号。",
-      "source": "GitHub",
-      "source_icon": "🐙",
-      "author": "Yueyuyu",
-      "published_at": "2026-07-13T15:29:25Z",
-      "fetched_at": "2026-07-13T16:23:59.165065+00:00",
-      "tags": [
-        "AI编程工具"
       ],
       "is_featured": false,
       "category": "资讯"
@@ -423,7 +428,7 @@
       "source_icon": "🐙",
       "author": "linyeping",
       "published_at": "2026-07-13T15:27:56Z",
-      "fetched_at": "2026-07-13T16:24:01.451624+00:00",
+      "fetched_at": "2026-07-13T20:52:22.103189+00:00",
       "tags": [
         "agent",
         "ai",
@@ -436,27 +441,6 @@
       "category": "资讯"
     },
     {
-      "id": "6e6ed7969573",
-      "title": "hfgwygey/yu-ai-agent",
-      "url": "https://github.com/hfgwygey/yu-ai-agent",
-      "summary": "编程导航 2025 年 AI 开发实战新项目，基于 Spring Boot 3 + Java 21 + Spring AI 构建 AI 恋爱大师应用和 ReAct 模式自主规划智能体YuManus，覆盖 AI 大模型接入、Spring AI 核心特性、Prompt 工程和优化、RAG 检索增强、向量数据库、Tool Calling 工具调用、MCP 模型上下文协议、AI Agent 开发、Curs",
-      "source": "GitHub",
-      "source_icon": "🐙",
-      "author": "hfgwygey",
-      "published_at": "2026-07-13T15:24:57Z",
-      "fetched_at": "2026-07-13T16:23:59.165082+00:00",
-      "tags": [
-        "ai",
-        "ai-model",
-        "backend",
-        "frontend",
-        "java",
-        "AI编程工具"
-      ],
-      "is_featured": false,
-      "category": "教程"
-    },
-    {
       "id": "ef7489bbe0c6",
       "title": "Agent专用搜索登顶Product Hunt，Token更省搜得更准",
       "url": "https://www.qbitai.com/2026/07/449327.html",
@@ -465,7 +449,7 @@
       "source_icon": "📰",
       "author": "闻乐",
       "published_at": "2026-07-13T15:15:01+00:00",
-      "fetched_at": "2026-07-13T16:21:36.567283+00:00",
+      "fetched_at": "2026-07-13T20:49:58.281472+00:00",
       "tags": [],
       "is_featured": false,
       "category": "资讯"
@@ -479,23 +463,7 @@
       "source_icon": "🐙",
       "author": "ECdison6227",
       "published_at": "2026-07-13T14:53:15Z",
-      "fetched_at": "2026-07-13T16:24:01.451642+00:00",
-      "tags": [
-        "AI写代码"
-      ],
-      "is_featured": false,
-      "category": "资讯"
-    },
-    {
-      "id": "e8df25ae53a4",
-      "title": "DayAlex1/allegro-vibe-bridge",
-      "url": "https://github.com/DayAlex1/allegro-vibe-bridge",
-      "summary": "这是一个专为 Cadence Allegro 和 AI agent（例如 Claude Code、Codex、Antigravity 等）打造的轻量级、无阻塞的 Vibe Coding 桥接系统。它让你可以在现代 IDE 中编写 SKILL 代码，并实时在 Allegro 中执行和查看结果。",
-      "source": "GitHub",
-      "source_icon": "🐙",
-      "author": "DayAlex1",
-      "published_at": "2026-07-13T14:45:42Z",
-      "fetched_at": "2026-07-13T16:24:01.451657+00:00",
+      "fetched_at": "2026-07-13T20:52:22.103201+00:00",
       "tags": [
         "AI写代码"
       ],
@@ -511,39 +479,7 @@
       "source_icon": "📺",
       "author": "网工狍",
       "published_at": "2026-07-13T12:55:00+00:00",
-      "fetched_at": "2026-07-13T16:21:00.784826+00:00",
-      "tags": [
-        "AI编程"
-      ],
-      "is_featured": false,
-      "category": "教程"
-    },
-    {
-      "id": "628bbaf982ef",
-      "title": "Rust开发工业级Agent编程：内置类人脑超强记忆系统与LLM模型",
-      "url": "https://www.bilibili.com/video/av116912281359932",
-      "summary": "KnoxCode 是一款在项目内运行的 AI 编程助手。描述您的需求——修复 bug、添加功能、探索陌生代码——KnoxCode 会读取文件、进行编辑、执行命令并汇报结果。您始终掌控全局：敏感操作前会征求确认，跨会话保留对话记忆，并遵循您为项目设定的规则。\n支持 终端（即将推出）、浏览器（即将推出）和 桌面应用。\nKnox 记忆系统\nKnoxCode 由 Knox 记忆系统（knox/knox-m",
-      "source": "哔哩哔哩",
-      "source_icon": "📺",
-      "author": "KnoxChat",
-      "published_at": "2026-07-13T10:52:10+00:00",
-      "fetched_at": "2026-07-13T16:21:28.504884+00:00",
-      "tags": [
-        "自然语言编程"
-      ],
-      "is_featured": false,
-      "category": "资讯"
-    },
-    {
-      "id": "9e3ae7904171",
-      "title": "【保姆级】AI时代计算机小白学习路线，附xmind思维导图，建议收藏。AI学习路线，计算机编程学习路线",
-      "url": "https://www.bilibili.com/video/av116912029696778",
-      "summary": "学习路线：https://aigcbaba.com/learning-path",
-      "source": "哔哩哔哩",
-      "source_icon": "📺",
-      "author": "武哥聊编程",
-      "published_at": "2026-07-13T09:48:21+00:00",
-      "fetched_at": "2026-07-13T16:21:01.776718+00:00",
+      "fetched_at": "2026-07-13T20:49:23.442407+00:00",
       "tags": [
         "AI编程"
       ],
@@ -559,7 +495,7 @@
       "source_icon": "📰",
       "author": "张子豪",
       "published_at": "2026-07-13T09:14:55+00:00",
-      "fetched_at": "2026-07-13T16:23:52.921589+00:00",
+      "fetched_at": "2026-07-13T20:52:13.727489+00:00",
       "tags": [],
       "is_featured": false,
       "category": "教程"
@@ -573,7 +509,7 @@
       "source_icon": "📺",
       "author": "AI课程研究院",
       "published_at": "2026-07-13T07:15:02+00:00",
-      "fetched_at": "2026-07-13T16:21:04.593081+00:00",
+      "fetched_at": "2026-07-13T20:49:26.849199+00:00",
       "tags": [
         "AI写代码"
       ],
@@ -589,7 +525,7 @@
       "source_icon": "📰",
       "author": "鹭羽",
       "published_at": "2026-07-13T06:53:56+00:00",
-      "fetched_at": "2026-07-13T16:21:36.567419+00:00",
+      "fetched_at": "2026-07-13T20:49:58.281562+00:00",
       "tags": [],
       "is_featured": false,
       "category": "资讯"
@@ -603,7 +539,7 @@
       "source_icon": "📺",
       "author": "半途不而废的程序猿",
       "published_at": "2026-07-13T06:48:04+00:00",
-      "fetched_at": "2026-07-13T16:21:04.093215+00:00",
+      "fetched_at": "2026-07-13T20:49:27.077973+00:00",
       "tags": [
         "AI写代码"
       ],
@@ -619,9 +555,25 @@
       "source_icon": "📺",
       "author": "小魔王脚本教学",
       "published_at": "2026-07-13T05:20:53+00:00",
-      "fetched_at": "2026-07-13T16:21:24.574779+00:00",
+      "fetched_at": "2026-07-13T20:49:46.845373+00:00",
       "tags": [
         "AI辅助编程"
+      ],
+      "is_featured": false,
+      "category": "教程"
+    },
+    {
+      "id": "d489195cc9b2",
+      "title": "【2026最新】Rust语言入门教程",
+      "url": "https://www.bilibili.com/video/av116907281812013",
+      "summary": "Rust语言入门教程\n教程资料：https://yun.139.com/shareweb/#/w/i/2w2KMxutQnHl1\n未完待续……",
+      "source": "哔哩哔哩",
+      "source_icon": "📺",
+      "author": "天雪浪子",
+      "published_at": "2026-07-12T16:00:00+00:00",
+      "fetched_at": "2026-07-13T20:49:50.083809+00:00",
+      "tags": [
+        "自然语言编程"
       ],
       "is_featured": false,
       "category": "教程"
@@ -635,7 +587,7 @@
       "source_icon": "📰",
       "author": "Garry Tan",
       "published_at": "2026-07-12T15:32:12-07:00",
-      "fetched_at": "2026-07-13T16:23:56.115151+00:00",
+      "fetched_at": "2026-07-13T20:52:16.599949+00:00",
       "tags": [],
       "is_featured": false,
       "category": "资讯"
@@ -649,7 +601,7 @@
       "source_icon": "📺",
       "author": "老玩匠番茄",
       "published_at": "2026-07-12T13:11:41+00:00",
-      "fetched_at": "2026-07-13T16:21:06.926668+00:00",
+      "fetched_at": "2026-07-13T20:49:29.373723+00:00",
       "tags": [
         "Cursor编辑器"
       ],
@@ -665,7 +617,7 @@
       "source_icon": "📰",
       "author": "青小蛙",
       "published_at": "2026-07-12T12:21:49+00:00",
-      "fetched_at": "2026-07-13T16:23:55.489168+00:00",
+      "fetched_at": "2026-07-13T20:52:15.932992+00:00",
       "tags": [],
       "is_featured": false,
       "category": "资讯"
@@ -679,7 +631,7 @@
       "source_icon": "📰",
       "author": "郑廷旭",
       "published_at": "2026-07-12T09:52:10+00:00",
-      "fetched_at": "2026-07-13T16:23:52.921747+00:00",
+      "fetched_at": "2026-07-13T20:52:13.727616+00:00",
       "tags": [],
       "is_featured": false,
       "category": "教程"
@@ -693,10 +645,26 @@
       "source_icon": "📰",
       "author": "青小蛙",
       "published_at": "2026-07-12T07:44:29+00:00",
-      "fetched_at": "2026-07-13T16:23:55.489252+00:00",
+      "fetched_at": "2026-07-13T20:52:15.933058+00:00",
       "tags": [],
       "is_featured": false,
       "category": "资讯"
+    },
+    {
+      "id": "fd82b110ba69",
+      "title": "语程中文编程-代码易语言版本-支持库69个 命令4701条",
+      "url": "https://www.bilibili.com/video/av116905872465804",
+      "summary": "如有需要学习与交流语程中文编程语言的\n可以到QQ群：1071251513",
+      "source": "哔哩哔哩",
+      "source_icon": "📺",
+      "author": "旭猜囱",
+      "published_at": "2026-07-12T07:43:21+00:00",
+      "fetched_at": "2026-07-13T20:49:48.630976+00:00",
+      "tags": [
+        "自然语言编程"
+      ],
+      "is_featured": false,
+      "category": "教程"
     },
     {
       "id": "a27134e3eed1",
@@ -707,41 +675,9 @@
       "source_icon": "📺",
       "author": "图灵架构师诸葛",
       "published_at": "2026-07-12T07:30:41+00:00",
-      "fetched_at": "2026-07-13T16:20:58.209108+00:00",
+      "fetched_at": "2026-07-13T20:49:20.677706+00:00",
       "tags": [
         "vibe coding"
-      ],
-      "is_featured": false,
-      "category": "教程"
-    },
-    {
-      "id": "eb19accef89f",
-      "title": "AI写代码越快，会清理AI烂代码更有价值",
-      "url": "https://www.bilibili.com/video/av116904932940768",
-      "summary": "AI写代码一时爽，修改起来却特别麻烦",
-      "source": "哔哩哔哩",
-      "source_icon": "📺",
-      "author": "杜大春_游戏开发版",
-      "published_at": "2026-07-12T03:46:27+00:00",
-      "fetched_at": "2026-07-13T16:21:05.073110+00:00",
-      "tags": [
-        "AI写代码"
-      ],
-      "is_featured": false,
-      "category": "资讯"
-    },
-    {
-      "id": "a07420ace325",
-      "title": "[电赛AIskill]写0行代码/纯agent速通2024年电赛H题——思路&amp;代码分享",
-      "url": "https://www.bilibili.com/video/av116900721922369",
-      "summary": "使用mspm0-skill速通2024年电赛h题教程/思路，视频内使用的是codex桌面端（现在叫ChatGPT桌面端），天猛星开发板+ccs环境编译+OpenOCD/DAPLink烧录，视频内skill支持各种开发板/工具链/Agent/烧录器/IDE等，详见https://github.com/mc3545dada/mspm0-skill，感兴趣的欢迎交流/Issue/PR/star等，谢谢a",
-      "source": "哔哩哔哩",
-      "source_icon": "📺",
-      "author": "3545D",
-      "published_at": "2026-07-11T09:56:10+00:00",
-      "fetched_at": "2026-07-13T16:21:04.839139+00:00",
-      "tags": [
-        "AI写代码"
       ],
       "is_featured": false,
       "category": "教程"
@@ -755,7 +691,7 @@
       "source_icon": "📰",
       "author": "Gary Miklos",
       "published_at": "2026-07-10T14:07:45-07:00",
-      "fetched_at": "2026-07-13T16:23:56.115083+00:00",
+      "fetched_at": "2026-07-13T20:52:16.600007+00:00",
       "tags": [],
       "is_featured": false,
       "category": "资讯"
@@ -769,7 +705,7 @@
       "source_icon": "📰",
       "author": "LOSSES",
       "published_at": "2026-07-10T10:50:28+08:00",
-      "fetched_at": "2026-07-13T16:21:34.132097+00:00",
+      "fetched_at": "2026-07-13T20:49:55.549562+00:00",
       "tags": [],
       "is_featured": false,
       "category": "资讯"
@@ -783,7 +719,7 @@
       "source_icon": "📺",
       "author": "吴恩达的AI课",
       "published_at": "2026-07-10T09:04:48+00:00",
-      "fetched_at": "2026-07-13T16:20:57.972801+00:00",
+      "fetched_at": "2026-07-13T20:49:20.907116+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -799,7 +735,7 @@
       "source_icon": "📰",
       "author": "阮一峰的网络日志",
       "published_at": "2026-07-10T08:05:31+08:00",
-      "fetched_at": "2026-07-13T16:23:40.986371+00:00",
+      "fetched_at": "2026-07-13T20:52:02.567243+00:00",
       "tags": [],
       "is_featured": false,
       "category": "资讯"
@@ -813,7 +749,7 @@
       "source_icon": "📰",
       "author": "Simdi Jinkins",
       "published_at": "2026-07-10T07:06:45-07:00",
-      "fetched_at": "2026-07-13T16:23:56.114989+00:00",
+      "fetched_at": "2026-07-13T20:52:16.599896+00:00",
       "tags": [],
       "is_featured": false,
       "category": "资讯"
@@ -827,9 +763,25 @@
       "source_icon": "📺",
       "author": "AI大模型_",
       "published_at": "2026-07-10T05:42:27+00:00",
-      "fetched_at": "2026-07-13T16:21:14.865166+00:00",
+      "fetched_at": "2026-07-13T20:49:36.008648+00:00",
       "tags": [
         "Claude Code"
+      ],
+      "is_featured": false,
+      "category": "教程"
+    },
+    {
+      "id": "a7fdbe03ac34",
+      "title": "【Vibe Coding AI编程 07】AI 时代还需要手写代码吗？用 Cursor 搭建 Go 语言游戏后端骨架与远程运维技巧",
+      "url": "https://www.bilibili.com/video/av116889397369356",
+      "summary": "https://www.youtube.com/watch?v=O3NBgag9ed8\n本视频转载自YouTube，原始上传时间：20260202，UP主：可乐AI实验室\n\n在 AI 编程工具极其强大的今天，我们是否还需要“手写”代码？\n本期我们进入实战深水区，用目前性能强悍的 Go 语言 (Golang) 搭建一个游戏后端框架。 我将演示如何利用 Cursor 完成从“逻辑构思”到“代码落地”的",
+      "source": "哔哩哔哩",
+      "source_icon": "📺",
+      "author": "悦来悦喜欢",
+      "published_at": "2026-07-09T10:00:50+00:00",
+      "fetched_at": "2026-07-13T20:49:49.587144+00:00",
+      "tags": [
+        "自然语言编程"
       ],
       "is_featured": false,
       "category": "教程"
@@ -843,7 +795,7 @@
       "source_icon": "📺",
       "author": "Git源宝",
       "published_at": "2026-07-08T03:10:00+00:00",
-      "fetched_at": "2026-07-13T16:20:57.710243+00:00",
+      "fetched_at": "2026-07-13T20:49:20.444566+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -859,28 +811,12 @@
       "source_icon": "📺",
       "author": "宝哥呀123",
       "published_at": "2026-07-07T15:28:21+00:00",
-      "fetched_at": "2026-07-13T16:21:20.809796+00:00",
+      "fetched_at": "2026-07-13T20:49:42.709219+00:00",
       "tags": [
         "AI编程工具"
       ],
       "is_featured": false,
       "category": "教程"
-    },
-    {
-      "id": "ec43cdb32e64",
-      "title": "提示工程：用自然语言编程",
-      "url": "https://www.bilibili.com/video/av116878777258460",
-      "summary": "",
-      "source": "哔哩哔哩",
-      "source_icon": "📺",
-      "author": "紫羊和她的单车",
-      "published_at": "2026-07-07T12:54:07+00:00",
-      "fetched_at": "2026-07-13T16:21:27.760114+00:00",
-      "tags": [
-        "自然语言编程"
-      ],
-      "is_featured": false,
-      "category": "资讯"
     },
     {
       "id": "77a143c429c1",
@@ -891,7 +827,7 @@
       "source_icon": "📺",
       "author": "PyduckGo-计算机分享",
       "published_at": "2026-07-06T12:23:28+00:00",
-      "fetched_at": "2026-07-13T16:21:20.297835+00:00",
+      "fetched_at": "2026-07-13T20:49:42.233545+00:00",
       "tags": [
         "AI编程工具"
       ],
@@ -899,17 +835,33 @@
       "category": "资讯"
     },
     {
-      "id": "111ea2f54474",
-      "title": "传统单片机编程 VS AI Agent编程",
-      "url": "https://www.bilibili.com/video/av116859701560539",
-      "summary": "-",
+      "id": "fa65239572db",
+      "title": "从零开始写小说AI辅助系列",
+      "url": "https://www.bilibili.com/video/av116868459268384",
+      "summary": "",
       "source": "哔哩哔哩",
       "source_icon": "📺",
-      "author": "专业理工男",
-      "published_at": "2026-07-04T04:03:06+00:00",
-      "fetched_at": "2026-07-13T16:21:28.002122+00:00",
+      "author": "肖文诺-荒野小说家",
+      "published_at": "2026-07-05T17:06:52+00:00",
+      "fetched_at": "2026-07-13T20:49:46.347366+00:00",
       "tags": [
-        "自然语言编程"
+        "AI辅助编程"
+      ],
+      "is_featured": false,
+      "category": "教程"
+    },
+    {
+      "id": "1243c0b571a7",
+      "title": "论GitHub Copilot 有多好用",
+      "url": "https://www.bilibili.com/video/av116856597910941",
+      "summary": "",
+      "source": "哔哩哔哩",
+      "source_icon": "📺",
+      "author": "钦帅",
+      "published_at": "2026-07-03T14:52:31+00:00",
+      "fetched_at": "2026-07-13T20:49:40.459225+00:00",
+      "tags": [
+        "Copilot编程"
       ],
       "is_featured": false,
       "category": "资讯"
@@ -923,7 +875,7 @@
       "source_icon": "📰",
       "author": "阮一峰的网络日志",
       "published_at": "2026-07-03T07:33:49+08:00",
-      "fetched_at": "2026-07-13T16:23:40.987105+00:00",
+      "fetched_at": "2026-07-13T20:52:02.567875+00:00",
       "tags": [],
       "is_featured": false,
       "category": "资讯"
@@ -937,7 +889,7 @@
       "source_icon": "📺",
       "author": "马士兵老师",
       "published_at": "2026-07-03T06:28:48+00:00",
-      "fetched_at": "2026-07-13T16:21:25.074947+00:00",
+      "fetched_at": "2026-07-13T20:49:46.593713+00:00",
       "tags": [
         "AI辅助编程"
       ],
@@ -953,7 +905,7 @@
       "source_icon": "📺",
       "author": "程序员鱼皮",
       "published_at": "2026-07-01T09:35:43+00:00",
-      "fetched_at": "2026-07-13T16:21:14.620944+00:00",
+      "fetched_at": "2026-07-13T20:49:37.187325+00:00",
       "tags": [
         "Claude Code"
       ],
@@ -969,7 +921,7 @@
       "source_icon": "📺",
       "author": "黑马程序员",
       "published_at": "2026-07-01T02:00:00+00:00",
-      "fetched_at": "2026-07-13T16:20:56.686761+00:00",
+      "fetched_at": "2026-07-13T20:49:19.281215+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -985,7 +937,7 @@
       "source_icon": "🔶",
       "author": "kirushik",
       "published_at": "2026-06-30T15:44:24Z",
-      "fetched_at": "2026-07-13T16:21:31.427112+00:00",
+      "fetched_at": "2026-07-13T20:49:52.648547+00:00",
       "tags": [
         "Claude Code"
       ],
@@ -1001,12 +953,28 @@
       "source_icon": "📺",
       "author": "隔壁的程序员老王",
       "published_at": "2026-06-25T09:00:00+00:00",
-      "fetched_at": "2026-07-13T16:20:57.451127+00:00",
+      "fetched_at": "2026-07-13T20:49:20.049139+00:00",
       "tags": [
         "vibe coding"
       ],
       "is_featured": true,
       "category": "精华"
+    },
+    {
+      "id": "4341c4f145c2",
+      "title": "程序员编程语言，从夯到拉排名",
+      "url": "https://www.bilibili.com/video/av116799253250443",
+      "summary": "程序员编程语言，从夯到拉排名   #web3  #web3怎么样 #web3入行 #web3薪资 #web3技能  #web3导图 #web3远程工作  #web3攻略 #web3学习 #编程语言 #程序员编程 #开发方向 #程序员转型",
+      "source": "哔哩哔哩",
+      "source_icon": "📺",
+      "author": "程序员Web3社区",
+      "published_at": "2026-06-23T11:48:45+00:00",
+      "fetched_at": "2026-07-13T20:49:49.353909+00:00",
+      "tags": [
+        "自然语言编程"
+      ],
+      "is_featured": false,
+      "category": "教程"
     },
     {
       "id": "1988b91772ee",
@@ -1017,7 +985,7 @@
       "source_icon": "📺",
       "author": "小米486",
       "published_at": "2026-06-22T10:24:18+00:00",
-      "fetched_at": "2026-07-13T16:21:03.624406+00:00",
+      "fetched_at": "2026-07-13T20:49:26.138830+00:00",
       "tags": [
         "AI写代码"
       ],
@@ -1033,7 +1001,7 @@
       "source_icon": "📺",
       "author": "AIOTVR",
       "published_at": "2026-06-20T16:13:25+00:00",
-      "fetched_at": "2026-07-13T16:21:10.008658+00:00",
+      "fetched_at": "2026-07-13T20:49:32.306841+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -1049,7 +1017,7 @@
       "source_icon": "📺",
       "author": "沧笙4",
       "published_at": "2026-06-17T11:17:07+00:00",
-      "fetched_at": "2026-07-13T16:21:11.322080+00:00",
+      "fetched_at": "2026-07-13T20:49:33.265129+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -1065,7 +1033,7 @@
       "source_icon": "📺",
       "author": "ExploreAIl",
       "published_at": "2026-06-17T05:16:43+00:00",
-      "fetched_at": "2026-07-13T16:21:11.569245+00:00",
+      "fetched_at": "2026-07-13T20:49:33.744297+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -1081,7 +1049,7 @@
       "source_icon": "📰",
       "author": "阮一峰的网络日志",
       "published_at": "2026-06-12T07:26:08+08:00",
-      "fetched_at": "2026-07-13T16:23:40.988435+00:00",
+      "fetched_at": "2026-07-13T20:52:02.569016+00:00",
       "tags": [],
       "is_featured": false,
       "category": "资讯"
@@ -1095,7 +1063,7 @@
       "source_icon": "📺",
       "author": "程序员小山与Bug",
       "published_at": "2026-06-11T12:00:00+00:00",
-      "fetched_at": "2026-07-13T16:21:27.014440+00:00",
+      "fetched_at": "2026-07-13T20:49:48.401290+00:00",
       "tags": [
         "自然语言编程"
       ],
@@ -1111,7 +1079,7 @@
       "source_icon": "📺",
       "author": "尚硅谷",
       "published_at": "2026-06-09T02:00:00+00:00",
-      "fetched_at": "2026-07-13T16:20:56.924558+00:00",
+      "fetched_at": "2026-07-13T20:49:19.545641+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -1127,7 +1095,7 @@
       "source_icon": "📺",
       "author": "AI大模型面试实战",
       "published_at": "2026-06-07T08:00:43+00:00",
-      "fetched_at": "2026-07-13T16:21:21.059963+00:00",
+      "fetched_at": "2026-07-13T20:49:42.939131+00:00",
       "tags": [
         "AI编程工具"
       ],
@@ -1143,7 +1111,7 @@
       "source_icon": "📰",
       "author": "阮一峰的网络日志",
       "published_at": "2026-06-05T08:07:45+08:00",
-      "fetched_at": "2026-07-13T16:23:40.989127+00:00",
+      "fetched_at": "2026-07-13T20:52:02.569581+00:00",
       "tags": [],
       "is_featured": false,
       "category": "资讯"
@@ -1157,7 +1125,7 @@
       "source_icon": "📺",
       "author": "程序员鱼皮",
       "published_at": "2026-05-15T12:35:03+00:00",
-      "fetched_at": "2026-07-13T16:21:01.274044+00:00",
+      "fetched_at": "2026-07-13T20:49:23.917550+00:00",
       "tags": [
         "AI编程"
       ],
@@ -1173,7 +1141,7 @@
       "source_icon": "📺",
       "author": "数字游牧人",
       "published_at": "2026-05-11T09:02:15+00:00",
-      "fetched_at": "2026-07-13T16:21:13.909662+00:00",
+      "fetched_at": "2026-07-13T20:49:36.236760+00:00",
       "tags": [
         "Claude Code"
       ],
@@ -1189,7 +1157,7 @@
       "source_icon": "📺",
       "author": "鼠标的数字人生",
       "published_at": "2026-05-07T15:02:01+00:00",
-      "fetched_at": "2026-07-13T16:21:10.248526+00:00",
+      "fetched_at": "2026-07-13T20:49:33.514070+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -1205,7 +1173,7 @@
       "source_icon": "🔶",
       "author": "e12e",
       "published_at": "2026-05-06T15:06:37Z",
-      "fetched_at": "2026-07-13T16:21:29.771694+00:00",
+      "fetched_at": "2026-07-13T20:49:51.136389+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -1221,7 +1189,7 @@
       "source_icon": "📺",
       "author": "秋芝2046",
       "published_at": "2026-05-05T14:08:25+00:00",
-      "fetched_at": "2026-07-13T16:21:13.675101+00:00",
+      "fetched_at": "2026-07-13T20:49:35.753389+00:00",
       "tags": [
         "Claude Code"
       ],
@@ -1237,7 +1205,7 @@
       "source_icon": "📺",
       "author": "大牙大-",
       "published_at": "2026-05-05T10:13:18+00:00",
-      "fetched_at": "2026-07-13T16:20:58.466846+00:00",
+      "fetched_at": "2026-07-13T20:49:21.162232+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -1253,9 +1221,25 @@
       "source_icon": "🔶",
       "author": "indrora",
       "published_at": "2026-05-02T19:57:26Z",
-      "fetched_at": "2026-07-13T16:21:32.474706+00:00",
+      "fetched_at": "2026-07-13T20:49:53.954335+00:00",
       "tags": [
         "Copilot"
+      ],
+      "is_featured": true,
+      "category": "精华"
+    },
+    {
+      "id": "c830561a916c",
+      "title": "5分钟安装ClaudeCode并接入DeepSeek",
+      "url": "https://www.bilibili.com/video/av116503957473279",
+      "summary": "5分钟教你安装ClaudeCode并接入DeepSeekV4\n用到的命令：\nnode版本检查：node -v\nnpm版本检查：npm -v\nnpm国内镜像：npm config set registry https://registry.npmmirror.com/\ngit版本检查：git -v\nClaudeCode安装命令：npm install -g @anthropic-ai/claude-",
+      "source": "哔哩哔哩",
+      "source_icon": "📺",
+      "author": "Yin_Code",
+      "published_at": "2026-05-02T08:14:12+00:00",
+      "fetched_at": "2026-07-13T20:49:36.951243+00:00",
+      "tags": [
+        "Claude Code"
       ],
       "is_featured": true,
       "category": "精华"
@@ -1269,7 +1253,7 @@
       "source_icon": "🔶",
       "author": "elmean",
       "published_at": "2026-04-30T14:36:58Z",
-      "fetched_at": "2026-07-13T16:21:31.427140+00:00",
+      "fetched_at": "2026-07-13T20:49:52.648571+00:00",
       "tags": [
         "Claude Code"
       ],
@@ -1285,7 +1269,7 @@
       "source_icon": "📺",
       "author": "人工大黑",
       "published_at": "2026-04-22T09:02:25+00:00",
-      "fetched_at": "2026-07-13T16:21:13.404709+00:00",
+      "fetched_at": "2026-07-13T20:49:35.518135+00:00",
       "tags": [
         "Claude Code"
       ],
@@ -1301,12 +1285,28 @@
       "source_icon": "📺",
       "author": "Git源宝",
       "published_at": "2026-04-21T03:15:00+00:00",
-      "fetched_at": "2026-07-13T16:21:00.047875+00:00",
+      "fetched_at": "2026-07-13T20:49:22.708137+00:00",
       "tags": [
         "AI编程"
       ],
       "is_featured": true,
       "category": "精华"
+    },
+    {
+      "id": "9b12a8a2e8aa",
+      "title": "AI编程时代，还需要学习编程吗",
+      "url": "https://www.bilibili.com/video/av116430741767846",
+      "summary": "AI 编程越来越强，程序员还要不要学编程？\n最近一边是裁员、缩招、降本增效，另一边是 AI 写代码的能力肉眼可见地提升。很多人开始怀疑：程序员这个职业还有没有前途？编程是不是快没必要学了？\n我在这期视频里想讲一个核心观点：\n表面上看，是 AI 在抢程序员的饭碗；但更深层看，是编程这件事本身在升级。\n未来真正重要的，可能不再只是“会写代码”，而是能不能理解需求、拆解系统、组织 AI、把东西真正交付出",
+      "source": "哔哩哔哩",
+      "source_icon": "📺",
+      "author": "HexUp",
+      "published_at": "2026-04-19T10:27:28+00:00",
+      "fetched_at": "2026-07-13T20:49:49.836263+00:00",
+      "tags": [
+        "自然语言编程"
+      ],
+      "is_featured": false,
+      "category": "教程"
     },
     {
       "id": "42422e63a6f4",
@@ -1317,7 +1317,7 @@
       "source_icon": "📺",
       "author": "leookun",
       "published_at": "2026-04-16T17:16:48+00:00",
-      "fetched_at": "2026-07-13T16:21:07.691269+00:00",
+      "fetched_at": "2026-07-13T20:49:29.829880+00:00",
       "tags": [
         "Cursor编辑器"
       ],
@@ -1333,7 +1333,7 @@
       "source_icon": "📺",
       "author": "杭州黄老师",
       "published_at": "2026-04-12T04:11:47+00:00",
-      "fetched_at": "2026-07-13T16:21:11.835583+00:00",
+      "fetched_at": "2026-07-13T20:49:33.997536+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -1349,7 +1349,7 @@
       "source_icon": "🔶",
       "author": "gardaani",
       "published_at": "2026-04-09T03:51:41Z",
-      "fetched_at": "2026-07-13T16:21:30.258361+00:00",
+      "fetched_at": "2026-07-13T20:49:51.610385+00:00",
       "tags": [
         "AI coding tool"
       ],
@@ -1365,7 +1365,7 @@
       "source_icon": "🔶",
       "author": "drob518",
       "published_at": "2026-04-06T18:31:03Z",
-      "fetched_at": "2026-07-13T16:21:29.771700+00:00",
+      "fetched_at": "2026-07-13T20:49:51.136394+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -1381,7 +1381,7 @@
       "source_icon": "🔶",
       "author": "StanAngeloff",
       "published_at": "2026-04-06T13:50:35Z",
-      "fetched_at": "2026-07-13T16:21:31.427135+00:00",
+      "fetched_at": "2026-07-13T20:49:52.648567+00:00",
       "tags": [
         "Claude Code"
       ],
@@ -1397,7 +1397,7 @@
       "source_icon": "🔶",
       "author": "alex000kim",
       "published_at": "2026-03-31T13:04:30Z",
-      "fetched_at": "2026-07-13T16:21:31.427130+00:00",
+      "fetched_at": "2026-07-13T20:49:52.648562+00:00",
       "tags": [
         "Claude Code"
       ],
@@ -1413,7 +1413,7 @@
       "source_icon": "🔶",
       "author": "treexs",
       "published_at": "2026-03-31T09:00:40Z",
-      "fetched_at": "2026-07-13T16:21:31.427126+00:00",
+      "fetched_at": "2026-07-13T20:49:52.648558+00:00",
       "tags": [
         "Claude Code"
       ],
@@ -1429,7 +1429,7 @@
       "source_icon": "🔶",
       "author": "pavo-etc",
       "published_at": "2026-03-30T04:04:31Z",
-      "fetched_at": "2026-07-13T16:21:32.474700+00:00",
+      "fetched_at": "2026-07-13T20:49:53.954330+00:00",
       "tags": [
         "Copilot"
       ],
@@ -1445,7 +1445,7 @@
       "source_icon": "🔶",
       "author": "fi-le",
       "published_at": "2026-03-03T18:02:04Z",
-      "fetched_at": "2026-07-13T16:21:30.258287+00:00",
+      "fetched_at": "2026-07-13T20:49:51.610354+00:00",
       "tags": [
         "AI coding tool"
       ],
@@ -1461,7 +1461,7 @@
       "source_icon": "🔶",
       "author": "robtherobber",
       "published_at": "2026-03-02T10:23:06Z",
-      "fetched_at": "2026-07-13T16:21:32.474716+00:00",
+      "fetched_at": "2026-07-13T20:49:53.954343+00:00",
       "tags": [
         "Copilot"
       ],
@@ -1477,7 +1477,7 @@
       "source_icon": "🔶",
       "author": "itunpredictable",
       "published_at": "2026-02-26T16:07:11Z",
-      "fetched_at": "2026-07-13T16:21:29.771711+00:00",
+      "fetched_at": "2026-07-13T20:49:51.136402+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -1493,7 +1493,7 @@
       "source_icon": "🔶",
       "author": "arjunbanker",
       "published_at": "2026-02-13T19:22:18Z",
-      "fetched_at": "2026-07-13T16:21:29.771706+00:00",
+      "fetched_at": "2026-07-13T20:49:51.136398+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -1509,7 +1509,7 @@
       "source_icon": "🔶",
       "author": "iamkrystian17",
       "published_at": "2026-02-03T08:45:57Z",
-      "fetched_at": "2026-07-13T16:21:30.258345+00:00",
+      "fetched_at": "2026-07-13T20:49:51.610373+00:00",
       "tags": [
         "AI coding tool"
       ],
@@ -1525,25 +1525,9 @@
       "source_icon": "🔶",
       "author": "mobitar",
       "published_at": "2026-01-26T13:36:22Z",
-      "fetched_at": "2026-07-13T16:21:29.771684+00:00",
+      "fetched_at": "2026-07-13T20:49:51.136380+00:00",
       "tags": [
         "vibe coding"
-      ],
-      "is_featured": true,
-      "category": "精华"
-    },
-    {
-      "id": "e657cccc7d1c",
-      "title": "Claude Code 从 0 到 1 全攻略：MCP / SubAgent / Agent Skill / Hook / 图片 / 上下文处理/ 后台任务",
-      "url": "https://www.bilibili.com/video/av115954889596221",
-      "summary": "时间戳如下，方便大家跳转观看：\n \n第一部分：环境搭建与基础交互\n- 01:09 安装 Claude Code\n- 01:43 登录与授权\n- 02:55 第一个实战问题\n- 03:12 三种模式详解 (默认/自动/规划)\n \n第二部分：复杂任务处理与终端控制\n- 06:00 执行终端命令 (Bash)\n- 06:49 使用规划模式 (Plan Mode)\n- 11:06 跳过所有权限检测 (da",
-      "source": "哔哩哔哩",
-      "source_icon": "📺",
-      "author": "马克的技术工作坊",
-      "published_at": "2026-01-25T08:55:20+00:00",
-      "fetched_at": "2026-07-13T16:21:15.123835+00:00",
-      "tags": [
-        "Claude Code"
       ],
       "is_featured": true,
       "category": "精华"
@@ -1557,7 +1541,7 @@
       "source_icon": "🔶",
       "author": "pavel_lishin",
       "published_at": "2026-01-23T16:19:18Z",
-      "fetched_at": "2026-07-13T16:21:29.771716+00:00",
+      "fetched_at": "2026-07-13T20:49:51.136406+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -1573,7 +1557,7 @@
       "source_icon": "📺",
       "author": "PM维他命",
       "published_at": "2026-01-13T05:42:40+00:00",
-      "fetched_at": "2026-07-13T16:21:21.984667+00:00",
+      "fetched_at": "2026-07-13T20:49:43.195117+00:00",
       "tags": [
         "AI编程工具"
       ],
@@ -1589,7 +1573,7 @@
       "source_icon": "📺",
       "author": "AI随风随风",
       "published_at": "2025-12-30T03:47:23+00:00",
-      "fetched_at": "2026-07-13T16:21:21.720610+00:00",
+      "fetched_at": "2026-07-13T20:49:43.455321+00:00",
       "tags": [
         "AI编程工具"
       ],
@@ -1605,7 +1589,7 @@
       "source_icon": "📺",
       "author": "韩顺平",
       "published_at": "2025-12-23T11:55:45+00:00",
-      "fetched_at": "2026-07-13T16:21:00.543241+00:00",
+      "fetched_at": "2026-07-13T20:49:23.198903+00:00",
       "tags": [
         "AI编程"
       ],
@@ -1621,7 +1605,7 @@
       "source_icon": "📺",
       "author": "杰森的效率工坊",
       "published_at": "2025-12-14T08:31:19+00:00",
-      "fetched_at": "2026-07-13T16:21:16.738064+00:00",
+      "fetched_at": "2026-07-13T20:49:40.206813+00:00",
       "tags": [
         "Copilot编程"
       ],
@@ -1629,36 +1613,36 @@
       "category": "教程"
     },
     {
-      "id": "311b6dc3f23c",
-      "title": "黑马程序员Python+AI零基础入门到大神全套视频课程，覆盖Python核心语法、AI应用、数据分析及Web应用等python实战项目开发全流程",
-      "url": "https://www.bilibili.com/video/av115610906266258",
-      "summary": "全部配套资源领取方式：关注黑马程序员公综号，回复关键词：251126\nPython学习球群284710916，告别孤单，共同进步！\n软件、代码、资源下载问题\nhttps://www.bilibili.com/read/cv7881295/\n===============================\n本课程采用“PPT讲解 + 实战演练”相结合的教学模式，围绕AI应用、数据分析、Web开发等多个",
+      "id": "316146004c93",
+      "title": "《直接给我生成完整代码》",
+      "url": "https://www.bilibili.com/video/av115666187196997",
+      "summary": "20000 点赞达成以后， 该视频对应的游戏会在 ___https://pan.quark.cn/s/dd548e0a7627___ 开放下载；\n50000 点赞达成以后， 该游戏对应的源码会在 ___https://github.com/WhereIsHeroFrom/shakeball___ 开放下载；\n100000 点赞达成以后，该游戏对应的文字版教程会在 _____________ 开放阅",
       "source": "哔哩哔哩",
       "source_icon": "📺",
-      "author": "黑马程序员",
-      "published_at": "2025-11-26T02:00:00+00:00",
-      "fetched_at": "2026-07-13T16:21:01.520395+00:00",
+      "author": "英雄哪里出来",
+      "published_at": "2025-12-05T10:00:00+00:00",
+      "fetched_at": "2026-07-13T20:49:27.328967+00:00",
       "tags": [
-        "AI编程"
+        "AI写代码"
       ],
       "is_featured": true,
       "category": "精华"
     },
     {
-      "id": "50edc84374cd",
-      "title": "《西门子 Industrial Copilot》工控分享",
-      "url": "https://www.bilibili.com/video/av115554199345727",
-      "summary": "",
+      "id": "5ccc2f2b3706",
+      "title": "【全30集】即梦+豆包+剪映，2小时快速掌握AI视频制作技巧，手把手教你从0到1制作AI短片！小白适用！学完即接单，带你玩转AI视频赛道！",
+      "url": "https://www.bilibili.com/video/av115297172393209",
+      "summary": "置顶评论领取学习资料哦~",
       "source": "哔哩哔哩",
       "source_icon": "📺",
-      "author": "阿凡工控分享",
-      "published_at": "2025-11-15T14:34:08+00:00",
-      "fetched_at": "2026-07-13T16:21:17.717194+00:00",
+      "author": "AI视频教程_",
+      "published_at": "2025-10-01T05:12:41+00:00",
+      "fetched_at": "2026-07-13T20:49:24.147684+00:00",
       "tags": [
-        "Copilot编程"
+        "AI编程"
       ],
-      "is_featured": false,
-      "category": "资讯"
+      "is_featured": true,
+      "category": "精华"
     },
     {
       "id": "629b088a32ab",
@@ -1669,7 +1653,7 @@
       "source_icon": "📺",
       "author": "AI随风随风",
       "published_at": "2025-08-22T00:41:16+00:00",
-      "fetched_at": "2026-07-13T16:21:11.083528+00:00",
+      "fetched_at": "2026-07-13T20:49:32.574211+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -1685,7 +1669,7 @@
       "source_icon": "🔶",
       "author": "walterbell",
       "published_at": "2025-07-21T16:55:53Z",
-      "fetched_at": "2026-07-13T16:21:30.258302+00:00",
+      "fetched_at": "2026-07-13T20:49:51.610366+00:00",
       "tags": [
         "AI coding tool"
       ],
@@ -1701,7 +1685,7 @@
       "source_icon": "🔶",
       "author": "agtestdvn",
       "published_at": "2025-07-17T18:55:14Z",
-      "fetched_at": "2026-07-13T16:21:31.958620+00:00",
+      "fetched_at": "2026-07-13T20:49:53.332814+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -1717,7 +1701,7 @@
       "source_icon": "🔶",
       "author": "agtestdvn",
       "published_at": "2025-07-16T21:42:53Z",
-      "fetched_at": "2026-07-13T16:21:31.958603+00:00",
+      "fetched_at": "2026-07-13T20:49:53.332800+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -1733,7 +1717,7 @@
       "source_icon": "🔶",
       "author": "manc_lad",
       "published_at": "2025-07-16T16:32:27Z",
-      "fetched_at": "2026-07-13T16:21:31.958577+00:00",
+      "fetched_at": "2026-07-13T20:49:53.332777+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -1749,7 +1733,7 @@
       "source_icon": "🔶",
       "author": "mychaelangelo",
       "published_at": "2025-07-14T18:13:50Z",
-      "fetched_at": "2026-07-13T16:21:31.958612+00:00",
+      "fetched_at": "2026-07-13T20:49:53.332807+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -1765,7 +1749,7 @@
       "source_icon": "🔶",
       "author": "gk1",
       "published_at": "2025-07-10T23:38:11Z",
-      "fetched_at": "2026-07-13T16:21:30.258281+00:00",
+      "fetched_at": "2026-07-13T20:49:51.610349+00:00",
       "tags": [
         "AI coding tool"
       ],
@@ -1781,7 +1765,7 @@
       "source_icon": "📺",
       "author": "青柠檬QUQ",
       "published_at": "2025-06-30T02:36:27+00:00",
-      "fetched_at": "2026-07-13T16:21:08.187709+00:00",
+      "fetched_at": "2026-07-13T20:49:30.537707+00:00",
       "tags": [
         "Cursor编辑器"
       ],
@@ -1797,7 +1781,7 @@
       "source_icon": "🔶",
       "author": "nomdep",
       "published_at": "2025-06-17T00:33:45Z",
-      "fetched_at": "2026-07-13T16:21:30.258273+00:00",
+      "fetched_at": "2026-07-13T20:49:51.610341+00:00",
       "tags": [
         "AI coding tool"
       ],
@@ -1813,7 +1797,7 @@
       "source_icon": "📺",
       "author": "大梦空间_",
       "published_at": "2025-04-17T12:03:54+00:00",
-      "fetched_at": "2026-07-13T16:21:04.352162+00:00",
+      "fetched_at": "2026-07-13T20:49:27.581072+00:00",
       "tags": [
         "AI写代码"
       ],
@@ -1829,7 +1813,7 @@
       "source_icon": "🔶",
       "author": "scaredpelican",
       "published_at": "2025-04-14T16:24:28Z",
-      "fetched_at": "2026-07-13T16:21:30.908904+00:00",
+      "fetched_at": "2026-07-13T20:49:52.154184+00:00",
       "tags": [
         "cursor IDE"
       ],
@@ -1845,7 +1829,7 @@
       "source_icon": "🔶",
       "author": "roseway4",
       "published_at": "2025-03-28T14:44:59Z",
-      "fetched_at": "2026-07-13T16:21:30.908934+00:00",
+      "fetched_at": "2026-07-13T20:49:52.154209+00:00",
       "tags": [
         "cursor IDE"
       ],
@@ -1861,7 +1845,7 @@
       "source_icon": "🔶",
       "author": "bchelli",
       "published_at": "2025-03-17T06:27:22Z",
-      "fetched_at": "2026-07-13T16:21:30.908920+00:00",
+      "fetched_at": "2026-07-13T20:49:52.154197+00:00",
       "tags": [
         "cursor IDE"
       ],
@@ -1877,7 +1861,7 @@
       "source_icon": "🔶",
       "author": "Jimmc414",
       "published_at": "2025-02-25T17:26:36Z",
-      "fetched_at": "2026-07-13T16:21:31.958628+00:00",
+      "fetched_at": "2026-07-13T20:49:53.332825+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -1893,7 +1877,7 @@
       "source_icon": "🔶",
       "author": "bakugo",
       "published_at": "2025-02-24T18:28:59Z",
-      "fetched_at": "2026-07-13T16:21:31.427120+00:00",
+      "fetched_at": "2026-07-13T20:49:52.648554+00:00",
       "tags": [
         "Claude Code"
       ],
@@ -1909,7 +1893,7 @@
       "source_icon": "🔶",
       "author": "iyn",
       "published_at": "2025-02-21T20:07:29Z",
-      "fetched_at": "2026-07-13T16:21:30.908954+00:00",
+      "fetched_at": "2026-07-13T20:49:52.154223+00:00",
       "tags": [
         "cursor IDE"
       ],
@@ -1925,12 +1909,28 @@
       "source_icon": "📺",
       "author": "程序员小台",
       "published_at": "2025-02-21T14:06:07+00:00",
-      "fetched_at": "2026-07-13T16:21:18.238878+00:00",
+      "fetched_at": "2026-07-13T20:49:39.737036+00:00",
       "tags": [
         "Copilot编程"
       ],
       "is_featured": false,
       "category": "资讯"
+    },
+    {
+      "id": "f1eef895568c",
+      "title": "【幻兽帕鲁】最新PalEdit帕鲁编辑器详细使用教程！轻松上手！",
+      "url": "https://www.bilibili.com/video/av113928906474105",
+      "summary": "如果简介区的下载地址不能用，可在后台回复关键词 “帕鲁”即可自动返回最新的幻兽帕鲁MOD安装器的下载地址\n\n幻兽帕鲁MOD安装器下载地址\nhttps://kdocs.cn/l/chPhwYIHALR",
+      "source": "哔哩哔哩",
+      "source_icon": "📺",
+      "author": "怀沙2049",
+      "published_at": "2025-02-01T13:42:58+00:00",
+      "fetched_at": "2026-07-13T20:49:30.773188+00:00",
+      "tags": [
+        "Cursor编辑器"
+      ],
+      "is_featured": false,
+      "category": "教程"
     },
     {
       "id": "2f9835707a97",
@@ -1941,7 +1941,7 @@
       "source_icon": "📺",
       "author": "Next蔡蔡",
       "published_at": "2025-01-25T09:40:12+00:00",
-      "fetched_at": "2026-07-13T16:21:07.429635+00:00",
+      "fetched_at": "2026-07-13T20:49:30.307802+00:00",
       "tags": [
         "Cursor编辑器"
       ],
@@ -1957,7 +1957,7 @@
       "source_icon": "📺",
       "author": "U有优游",
       "published_at": "2025-01-05T14:34:19+00:00",
-      "fetched_at": "2026-07-13T16:21:03.369870+00:00",
+      "fetched_at": "2026-07-13T20:49:26.619848+00:00",
       "tags": [
         "AI写代码"
       ],
@@ -1973,7 +1973,7 @@
       "source_icon": "🔶",
       "author": "marvin-hansen",
       "published_at": "2024-12-22T09:21:12Z",
-      "fetched_at": "2026-07-13T16:21:31.958594+00:00",
+      "fetched_at": "2026-07-13T20:49:53.332793+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -1989,7 +1989,7 @@
       "source_icon": "📺",
       "author": "花叔v",
       "published_at": "2024-12-11T23:05:00+00:00",
-      "fetched_at": "2026-07-13T16:21:10.744700+00:00",
+      "fetched_at": "2026-07-13T20:49:33.034370+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -2005,7 +2005,7 @@
       "source_icon": "📺",
       "author": "IT楠老师",
       "published_at": "2024-11-12T11:26:51+00:00",
-      "fetched_at": "2026-07-13T16:21:07.937751+00:00",
+      "fetched_at": "2026-07-13T20:49:30.073775+00:00",
       "tags": [
         "Cursor编辑器"
       ],
@@ -2021,7 +2021,7 @@
       "source_icon": "🔶",
       "author": "vitaly-pavlenko",
       "published_at": "2024-10-03T20:42:45Z",
-      "fetched_at": "2026-07-13T16:21:30.908944+00:00",
+      "fetched_at": "2026-07-13T20:49:52.154216+00:00",
       "tags": [
         "cursor IDE"
       ],
@@ -2037,25 +2037,9 @@
       "source_icon": "🔶",
       "author": "simonpure",
       "published_at": "2024-08-26T03:44:48Z",
-      "fetched_at": "2026-07-13T16:21:30.908914+00:00",
+      "fetched_at": "2026-07-13T20:49:52.154192+00:00",
       "tags": [
         "cursor IDE"
-      ],
-      "is_featured": true,
-      "category": "精华"
-    },
-    {
-      "id": "8c3e748523ed",
-      "title": "【全748集】目前B站最全最细的Python零基础全套教程，2026最新版，包含所有干货！七天就能从小白到大神！少走99%的弯路！存下吧！很难找全的！",
-      "url": "https://www.bilibili.com/video/av113006243481679",
-      "summary": "【视频配套籽料、开发环境搭建安装包教程、电子书+问题解答请看 ”置顶平论” 自取哦】\r\n本套教程从零开始讲解，手把手教学，包含基础语法、进阶语法、爬虫、自动化办公、数据分析\r\n无论是新手小白，还是有一定编码经验的选手，皆可学习\r\n如果视频对你有用的话请 一键三连【长按点赞】支持一下UP哦，拜托，这对我真的很重要！",
-      "source": "哔哩哔哩",
-      "source_icon": "📺",
-      "author": "Python官方课程",
-      "published_at": "2024-08-22T14:59:18+00:00",
-      "fetched_at": "2026-07-13T16:21:28.749556+00:00",
-      "tags": [
-        "自然语言编程"
       ],
       "is_featured": true,
       "category": "精华"
@@ -2069,7 +2053,7 @@
       "source_icon": "📺",
       "author": "极客时间App",
       "published_at": "2024-02-05T12:00:00+00:00",
-      "fetched_at": "2026-07-13T16:21:17.975570+00:00",
+      "fetched_at": "2026-07-13T20:49:39.502388+00:00",
       "tags": [
         "Copilot编程"
       ],
@@ -2085,7 +2069,7 @@
       "source_icon": "📺",
       "author": "卜凌峰同学",
       "published_at": "2023-08-20T14:33:16+00:00",
-      "fetched_at": "2026-07-13T16:21:18.483557+00:00",
+      "fetched_at": "2026-07-13T20:49:39.977033+00:00",
       "tags": [
         "Copilot编程"
       ],
@@ -2101,7 +2085,7 @@
       "source_icon": "📺",
       "author": "CV-Tan",
       "published_at": "2023-08-11T13:23:55+00:00",
-      "fetched_at": "2026-07-13T16:21:16.990521+00:00",
+      "fetched_at": "2026-07-13T20:49:38.987703+00:00",
       "tags": [
         "Copilot编程"
       ],
@@ -2117,23 +2101,7 @@
       "source_icon": "📺",
       "author": "自然语言编程早叔",
       "published_at": "2023-04-01T11:28:24+00:00",
-      "fetched_at": "2026-07-13T16:21:28.269365+00:00",
-      "tags": [
-        "自然语言编程"
-      ],
-      "is_featured": false,
-      "category": "资讯"
-    },
-    {
-      "id": "b776c9aab93f",
-      "title": "【强烈推荐】8个程序员常逛的高质量编程技术论坛，再也不用担心自学编程被嘲讽啦！",
-      "url": "https://www.bilibili.com/video/av932171169",
-      "summary": "祝大家立秋快乐呀，记得喝奶茶噢！！！",
-      "source": "哔哩哔哩",
-      "source_icon": "📺",
-      "author": "python导师海伦",
-      "published_at": "2021-08-07T10:55:13+00:00",
-      "fetched_at": "2026-07-13T16:21:27.267945+00:00",
+      "fetched_at": "2026-07-13T20:49:49.112189+00:00",
       "tags": [
         "自然语言编程"
       ],
@@ -2149,7 +2117,7 @@
       "source_icon": "🔶",
       "author": "bencollier49",
       "published_at": "2021-07-02T11:52:19Z",
-      "fetched_at": "2026-07-13T16:21:32.474711+00:00",
+      "fetched_at": "2026-07-13T20:49:53.954339+00:00",
       "tags": [
         "Copilot"
       ],
@@ -2165,7 +2133,7 @@
       "source_icon": "🔶",
       "author": "todsacerdoti",
       "published_at": "2021-06-29T14:29:39Z",
-      "fetched_at": "2026-07-13T16:21:32.474691+00:00",
+      "fetched_at": "2026-07-13T20:49:53.954323+00:00",
       "tags": [
         "Copilot"
       ],
@@ -2181,28 +2149,12 @@
       "source_icon": "📺",
       "author": "狼的微笑311",
       "published_at": "2020-08-15T08:31:17+00:00",
-      "fetched_at": "2026-07-13T16:21:06.649995+00:00",
+      "fetched_at": "2026-07-13T20:49:29.121045+00:00",
       "tags": [
         "Cursor编辑器"
       ],
       "is_featured": true,
       "category": "精华"
-    },
-    {
-      "id": "b95dfac13771",
-      "title": "【kenshi_fcs】包教包会的编辑器教程",
-      "url": "https://www.bilibili.com/video/av837642314",
-      "summary": "kenshi游戏自带的编辑器功能强大，steam创意工坊以及贴吧都有编辑器的汉化版本，安装教程也非常详细，有需要的可以自行寻找，本视频编辑器教学是我通过反复尝试实践而来，编辑器与实际游戏中会存在一定出入，我对于编辑器的理解也不算是精通，主要还是想给单纯想要实现基础功能的伙伴们提供一下思路，如果有一些错误之处，欢迎在评论区指正！",
-      "source": "哔哩哔哩",
-      "source_icon": "📺",
-      "author": "靳宁宁",
-      "published_at": "2020-04-07T19:09:59+00:00",
-      "fetched_at": "2026-07-13T16:21:08.447086+00:00",
-      "tags": [
-        "Cursor编辑器"
-      ],
-      "is_featured": false,
-      "category": "教程"
     },
     {
       "id": "d5b5fb2f58ab",
@@ -2213,7 +2165,7 @@
       "source_icon": "🔶",
       "author": "wodow",
       "published_at": "2016-04-14T14:44:57Z",
-      "fetched_at": "2026-07-13T16:21:32.474721+00:00",
+      "fetched_at": "2026-07-13T20:49:53.954347+00:00",
       "tags": [
         "Copilot"
       ],
