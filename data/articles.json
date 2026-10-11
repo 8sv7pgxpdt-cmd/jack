@@ -1,72 +1,65 @@
 {
-  "updated_at": "2026-10-10T23:08:18.401324+00:00",
-  "total": 60,
+  "updated_at": "2026-10-11T08:03:43.534491+00:00",
+  "total": 64,
   "categories": {
-    "教程": 3,
-    "资讯": 34,
-    "精华": 23
+    "教程": 2,
+    "资讯": 38,
+    "精华": 24
   },
   "sources": {
+    "InfoQ中文": 1,
     "GitHub": 18,
+    "哔哩哔哩": 2,
+    "Product Hunt": 3,
     "量子位": 1,
     "阮一峰的网络日志": 3,
-    "Product Hunt": 1,
-    "Hacker News": 36,
-    "哔哩哔哩": 1
+    "Hacker News": 36
   },
   "articles": [
     {
-      "id": "c721b45d71c6",
-      "title": "pomsfgend/FGMDCharge-FD-ROUND-V2",
-      "url": "https://github.com/pomsfgend/FGMDCharge-FD-ROUND-V2",
-      "summary": "Vibe-coded ESP32-C3 firmware for a round DC-charging cube. GB/T 27930 BMS on CAN. Factory dump included, not MIT. No single author.",
+      "id": "67d744e5e633",
+      "title": "AI 时代的移动端稳定性保障 —— 柯南 AI Agent 实践｜QCon上海",
+      "url": "https://www.infoq.cn/article/FTtTLqvzJeMiE03IowFP?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "source": "InfoQ中文",
+      "source_icon": "📰",
+      "author": "QCon全球软件开发大会",
+      "published_at": "2026-10-11T08:03:21.605384+00:00",
+      "fetched_at": "2026-10-11T08:03:21.605396+00:00",
+      "tags": [],
+      "is_featured": false,
+      "category": "资讯"
+    },
+    {
+      "id": "425eb8c63a89",
+      "title": "AKittoe/adjoakittoe-site",
+      "url": "https://github.com/AKittoe/adjoakittoe-site",
+      "summary": "Partly vibe coded, partly not, personal website of Adjoa kittoe",
       "source": "GitHub",
       "source_icon": "🐙",
-      "author": "pomsfgend",
-      "published_at": "2026-10-10T23:07:38Z",
-      "fetched_at": "2026-10-10T23:08:11.863782+00:00",
+      "author": "AKittoe",
+      "published_at": "2026-10-11T08:02:50Z",
+      "fetched_at": "2026-10-11T08:03:37.004964+00:00",
       "tags": [
-        "can",
-        "esp-idf",
-        "esp32",
-        "esp32-c3",
-        "gbt27930",
+        "blog",
+        "personal-website",
+        "portfolio",
+        "vibe-coding",
         "vibe coding"
       ],
       "is_featured": false,
       "category": "资讯"
     },
     {
-      "id": "51e6749a1a04",
-      "title": "lawzava/megapowers",
-      "url": "https://github.com/lawzava/megapowers",
-      "summary": "One plugin for Claude Code and Codex: task skills, an output style, a destructive-command tripwire, and a doctor. Measured, not vibed.",
+      "id": "6d34a9adff15",
+      "title": "biscuitbox/student-vibe-coding",
+      "url": "https://github.com/biscuitbox/student-vibe-coding",
+      "summary": "",
       "source": "GitHub",
       "source_icon": "🐙",
-      "author": "lawzava",
-      "published_at": "2026-10-10T23:07:23Z",
-      "fetched_at": "2026-10-10T23:08:11.863796+00:00",
-      "tags": [
-        "agent-skills",
-        "ai-agents",
-        "claude-code",
-        "claude-code-plugins",
-        "codex",
-        "vibe coding"
-      ],
-      "is_featured": false,
-      "category": "资讯"
-    },
-    {
-      "id": "3e07c70925ab",
-      "title": "pfeiferj/codeit.nvim",
-      "url": "https://github.com/pfeiferj/codeit.nvim",
-      "summary": "A vibe coded neovim ai coding assistant",
-      "source": "GitHub",
-      "source_icon": "🐙",
-      "author": "pfeiferj",
-      "published_at": "2026-10-10T23:06:58Z",
-      "fetched_at": "2026-10-10T23:08:11.863805+00:00",
+      "author": "biscuitbox",
+      "published_at": "2026-10-11T08:02:03Z",
+      "fetched_at": "2026-10-11T08:03:37.004985+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -74,15 +67,15 @@
       "category": "资讯"
     },
     {
-      "id": "21d8e7650e94",
-      "title": "imfauzan14/vibe-rp",
-      "url": "https://github.com/imfauzan14/vibe-rp",
-      "summary": "slop vibe coded with no frontier models, just some dirt cheap and free models",
+      "id": "e8679c737b94",
+      "title": "akmaier/agent-m",
+      "url": "https://github.com/akmaier/agent-m",
+      "summary": "Agent M — a GitHub/Pages companion for the full software engineering cycle, from requirement sources to a released product. Companion tool to the Vibe Coding book.",
       "source": "GitHub",
       "source_icon": "🐙",
-      "author": "imfauzan14",
-      "published_at": "2026-10-10T23:06:55Z",
-      "fetched_at": "2026-10-10T23:08:11.863811+00:00",
+      "author": "akmaier",
+      "published_at": "2026-10-11T08:01:59Z",
+      "fetched_at": "2026-10-11T08:03:37.004997+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -90,31 +83,15 @@
       "category": "资讯"
     },
     {
-      "id": "944c472db702",
-      "title": "tykimos/ai-whatchelin",
-      "url": "https://github.com/tykimos/ai-whatchelin",
-      "summary": "AI WhatChelin? — The Ultimate AI Tool Comparison Guide for Vibe Coders, Creators & Office Workers",
+      "id": "a26d32f46831",
+      "title": "ardenone/vibecodeleaderboard-frontend",
+      "url": "https://github.com/ardenone/vibecodeleaderboard-frontend",
+      "summary": "Public frontend for Vibe Code Leaderboard - tracking AI-assisted coding across GitHub",
       "source": "GitHub",
       "source_icon": "🐙",
-      "author": "tykimos",
-      "published_at": "2026-10-10T23:06:46Z",
-      "fetched_at": "2026-10-10T23:08:11.863816+00:00",
-      "tags": [
-        "vibe coding"
-      ],
-      "is_featured": false,
-      "category": "教程"
-    },
-    {
-      "id": "7ad221b46ad7",
-      "title": "nebocamin/retchat",
-      "url": "https://github.com/nebocamin/retchat",
-      "summary": "watch out, its all vibe coded",
-      "source": "GitHub",
-      "source_icon": "🐙",
-      "author": "nebocamin",
-      "published_at": "2026-10-10T23:06:44Z",
-      "fetched_at": "2026-10-10T23:08:11.863829+00:00",
+      "author": "ardenone",
+      "published_at": "2026-10-11T08:00:39Z",
+      "fetched_at": "2026-10-11T08:03:37.005020+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -122,17 +99,35 @@
       "category": "资讯"
     },
     {
-      "id": "1268bc6f65b0",
-      "title": "xu756/TrendRadar",
-      "url": "https://github.com/xu756/TrendRadar",
-      "summary": "🎯 告别信息过载，AI 助你看懂新闻资讯热点，简单的舆情监控分析 - 多平台热点聚合+基于 MCP 的AI分析工具。监控35个平台（抖音、知乎、B站、华尔街见闻、财联社等），智能筛选+自动推送+AI对话分析（用自然语言深度挖掘新闻：趋势追踪、情感分析、相似检索等13种工具）。支持企业微信/飞书/钉钉/Telegram/邮件/ntfy推送，30秒网页部署，1分钟手机通知，无需编程。支持Docker部",
+      "id": "803c3833670e",
+      "title": "jedarden/vibecodeleaderboard-frontend",
+      "url": "https://github.com/jedarden/vibecodeleaderboard-frontend",
+      "summary": "Public frontend for Vibe Code Leaderboard - tracking AI-assisted coding across GitHub",
       "source": "GitHub",
       "source_icon": "🐙",
-      "author": "xu756",
-      "published_at": "2026-10-10T23:06:12Z",
-      "fetched_at": "2026-10-10T23:08:14.131838+00:00",
+      "author": "jedarden",
+      "published_at": "2026-10-11T08:00:37Z",
+      "fetched_at": "2026-10-11T08:03:37.005030+00:00",
       "tags": [
-        "AI编程工具"
+        "vibe coding"
+      ],
+      "is_featured": false,
+      "category": "资讯"
+    },
+    {
+      "id": "1f7e13633c62",
+      "title": "dmknght/kofeng",
+      "url": "https://github.com/dmknght/kofeng",
+      "summary": "[Vibe coded] Malware Scanner Engine Using Executable Signature Modules",
+      "source": "GitHub",
+      "source_icon": "🐙",
+      "author": "dmknght",
+      "published_at": "2026-10-11T08:00:12Z",
+      "fetched_at": "2026-10-11T08:03:37.005040+00:00",
+      "tags": [
+        "malware-detection",
+        "malware-scanner",
+        "vibe coding"
       ],
       "is_featured": false,
       "category": "资讯"
@@ -145,10 +140,26 @@
       "source": "GitHub",
       "source_icon": "🐙",
       "author": "lxc512157407",
-      "published_at": "2026-10-10T22:53:53Z",
-      "fetched_at": "2026-10-10T23:08:16.400733+00:00",
+      "published_at": "2026-10-11T07:55:24Z",
+      "fetched_at": "2026-10-11T08:03:41.533822+00:00",
       "tags": [
         "AI写代码"
+      ],
+      "is_featured": false,
+      "category": "资讯"
+    },
+    {
+      "id": "fa73c83103c1",
+      "title": "yy130202/cursor-local",
+      "url": "https://github.com/yy130202/cursor-local",
+      "summary": "复刻 Cursor 核心体验的本地桌面 AI 编程工具 (Electron + Monaco)",
+      "source": "GitHub",
+      "source_icon": "🐙",
+      "author": "yy130202",
+      "published_at": "2026-10-11T07:53:35Z",
+      "fetched_at": "2026-10-11T08:03:39.274519+00:00",
+      "tags": [
+        "AI编程工具"
       ],
       "is_featured": false,
       "category": "资讯"
@@ -161,8 +172,8 @@
       "source": "GitHub",
       "source_icon": "🐙",
       "author": "2233admin",
-      "published_at": "2026-10-10T22:13:55Z",
-      "fetched_at": "2026-10-10T23:08:16.400763+00:00",
+      "published_at": "2026-10-11T07:25:20Z",
+      "fetched_at": "2026-10-11T08:03:41.533862+00:00",
       "tags": [
         "agent-skills",
         "ai-agents",
@@ -175,48 +186,21 @@
       "category": "资讯"
     },
     {
-      "id": "28a972143687",
-      "title": "bobkingdom/TrendRadar",
-      "url": "https://github.com/bobkingdom/TrendRadar",
-      "summary": "🎯 告别信息过载，AI 助你看懂新闻资讯热点，简单的舆情监控分析 - 多平台热点聚合+基于 MCP 的AI分析工具。监控35个平台（抖音、知乎、B站、华尔街见闻、财联社等），智能筛选+自动推送+AI对话分析（用自然语言深度挖掘新闻：趋势追踪、情感分析、相似检索等13种工具）。支持企业微信/飞书/钉钉/Telegram/邮件/ntfy推送，30秒网页部署，1分钟手机通知，无需编程。支持Docker部",
+      "id": "f66836e83177",
+      "title": "jnMetaCode/impeccable-zh",
+      "url": "https://github.com/jnMetaCode/impeccable-zh",
+      "summary": "Impeccable 中文社区增强版：完整汉化、中文设计增强与 19 种 AI 编程工具支持",
       "source": "GitHub",
       "source_icon": "🐙",
-      "author": "bobkingdom",
-      "published_at": "2026-10-10T22:11:35Z",
-      "fetched_at": "2026-10-10T23:08:14.131867+00:00",
+      "author": "jnMetaCode",
+      "published_at": "2026-10-11T07:23:21Z",
+      "fetched_at": "2026-10-11T08:03:39.274544+00:00",
       "tags": [
-        "AI编程工具"
-      ],
-      "is_featured": false,
-      "category": "资讯"
-    },
-    {
-      "id": "96966387a959",
-      "title": "nicholas678/TrendRadar",
-      "url": "https://github.com/nicholas678/TrendRadar",
-      "summary": "🎯 告别信息过载，AI 助你看懂新闻资讯热点，简单的舆情监控分析 - 多平台热点聚合+基于 MCP 的AI分析工具。监控35个平台（抖音、知乎、B站、华尔街见闻、财联社等），智能筛选+自动推送+AI对话分析（用自然语言深度挖掘新闻：趋势追踪、情感分析、相似检索等13种工具）。支持企业微信/个人微信/飞书/钉钉/Telegram/邮件/ntfy/bark 推送，30秒网页部署，1分钟手机通知，无需编",
-      "source": "GitHub",
-      "source_icon": "🐙",
-      "author": "nicholas678",
-      "published_at": "2026-10-10T22:11:02Z",
-      "fetched_at": "2026-10-10T23:08:14.131881+00:00",
-      "tags": [
-        "AI编程工具"
-      ],
-      "is_featured": false,
-      "category": "资讯"
-    },
-    {
-      "id": "b05ec1b037d5",
-      "title": "bhygg/TrendRadar2",
-      "url": "https://github.com/bhygg/TrendRadar2",
-      "summary": "🎯 告别信息过载，AI 助你看懂新闻资讯热点，简单的舆情监控分析 - 多平台热点聚合+基于 MCP 的AI分析工具。监控35个平台（抖音、知乎、B站、华尔街见闻、财联社等），智能筛选+自动推送+AI对话分析（用自然语言深度挖掘新闻：趋势追踪、情感分析、相似检索等13种工具）。支持企业微信/个人微信/飞书/钉钉/Telegram/邮件/ntfy/bark/slack 推送，30秒网页部署，1分钟手机",
-      "source": "GitHub",
-      "source_icon": "🐙",
-      "author": "bhygg",
-      "published_at": "2026-10-10T22:09:52Z",
-      "fetched_at": "2026-10-10T23:08:14.131895+00:00",
-      "tags": [
+        "agent-skills",
+        "ai-coding",
+        "chinese-localization",
+        "claude-code",
+        "codex",
         "AI编程工具"
       ],
       "is_featured": false,
@@ -230,63 +214,10 @@
       "source": "GitHub",
       "source_icon": "🐙",
       "author": "killy990",
-      "published_at": "2026-10-10T21:29:51Z",
-      "fetched_at": "2026-10-10T23:08:14.131909+00:00",
+      "published_at": "2026-10-11T06:59:32Z",
+      "fetched_at": "2026-10-11T08:03:39.274561+00:00",
       "tags": [
         "AI编程工具"
-      ],
-      "is_featured": false,
-      "category": "资讯"
-    },
-    {
-      "id": "e6467c93f763",
-      "title": "Helix-lyh/leeway",
-      "url": "https://github.com/Helix-lyh/leeway",
-      "summary": "AI 编程 provider 用量 / 额度 / 重置时间的纯 CLI 探测工具",
-      "source": "GitHub",
-      "source_icon": "🐙",
-      "author": "Helix-lyh",
-      "published_at": "2026-10-10T21:14:05Z",
-      "fetched_at": "2026-10-10T23:08:14.131922+00:00",
-      "tags": [
-        "AI编程工具"
-      ],
-      "is_featured": false,
-      "category": "资讯"
-    },
-    {
-      "id": "9eb9664e2ecb",
-      "title": "songconmaisaix31-design/mcpet",
-      "url": "https://github.com/songconmaisaix31-design/mcpet",
-      "summary": "把写代码时的 AI 搭子换上麦当劳制服，养在桌面角落：11:30 喊你干饭、汇报最划算的券、用营养数据把关；跑长任务时同步项目进度与 token 余额。全程真实调用麦当劳 MCP，非官方产品。",
-      "source": "GitHub",
-      "source_icon": "🐙",
-      "author": "songconmaisaix31-design",
-      "published_at": "2026-10-10T17:09:31Z",
-      "fetched_at": "2026-10-10T23:08:16.400773+00:00",
-      "tags": [
-        "ai-agent",
-        "desktop-pet",
-        "llm",
-        "mcdonalds",
-        "mcdonalds-mcp",
-        "AI写代码"
-      ],
-      "is_featured": false,
-      "category": "资讯"
-    },
-    {
-      "id": "9c6c961799a8",
-      "title": "Nideryabor/FuckDSManger",
-      "url": "https://github.com/Nideryabor/FuckDSManger",
-      "summary": "某 AI 聊天 App 的 LSPosed 模块 FuckDSManger —— 项目文档 + 发行版归档。含大纲 / 版本 / 专题 / 参考 / 原始备份 / 手写 smali 时代源码存档。仅供学习交流。",
-      "source": "GitHub",
-      "source_icon": "🐙",
-      "author": "Nideryabor",
-      "published_at": "2026-10-10T16:04:31Z",
-      "fetched_at": "2026-10-10T23:08:16.400784+00:00",
-      "tags": [
-        "AI写代码"
       ],
       "is_featured": false,
       "category": "资讯"
@@ -299,8 +230,8 @@
       "source": "GitHub",
       "source_icon": "🐙",
       "author": "Blank2007",
-      "published_at": "2026-10-10T15:52:26Z",
-      "fetched_at": "2026-10-10T23:08:16.400794+00:00",
+      "published_at": "2026-10-11T06:47:39Z",
+      "fetched_at": "2026-10-11T08:03:41.533879+00:00",
       "tags": [
         "adb",
         "ai-generated",
@@ -313,18 +244,143 @@
       "category": "资讯"
     },
     {
-      "id": "450a6dd628c5",
-      "title": "KDBSUN/guanhouzhuanming",
-      "url": "https://github.com/KDBSUN/guanhouzhuanming",
-      "summary": "以传统术数典籍为规则底本的占卜工具。梅花易数、纳甲六爻、四柱八字、奇门遁甲、大六壬五种占法，排盘、体用、处方五行、应期全部由代码按典籍规则算，AI 只负责把算出的结论说成人话——同一个卦问两次，判定结果完全相同。每条判定都标典籍出处、可展开原文核对：916 条万物属类逐字回源、214 个行号锚点、712 条测试守着不被顺手改写。起卦排盘不扣额度，AI 解卦才计数；自带 API key 可无限解卦，",
+      "id": "e6467c93f763",
+      "title": "Helix-lyh/leeway",
+      "url": "https://github.com/Helix-lyh/leeway",
+      "summary": "AI 编程 provider 用量 / 额度 / 重置时间的纯 CLI 探测工具",
       "source": "GitHub",
       "source_icon": "🐙",
-      "author": "KDBSUN",
-      "published_at": "2026-10-10T13:45:08Z",
-      "fetched_at": "2026-10-10T23:08:16.400804+00:00",
+      "author": "Helix-lyh",
+      "published_at": "2026-10-11T06:46:08Z",
+      "fetched_at": "2026-10-11T08:03:39.274588+00:00",
+      "tags": [
+        "AI编程工具"
+      ],
+      "is_featured": false,
+      "category": "资讯"
+    },
+    {
+      "id": "9b2db808606f",
+      "title": "akitiaool/human-agent",
+      "url": "https://github.com/akitiaool/human-agent",
+      "summary": "一个拟人化的 AI 智能体命令行工具：在终端里和能使用工具的 AI助手自然对话，让它帮你读写文件、执行命令、搜索代码、抓取网页。危险操作会先征求你的确认，只在授权范围内动手；支持终端对话和浏览器网页对话两种使用方式，架构模块化，便于扩展。",
+      "source": "GitHub",
+      "source_icon": "🐙",
+      "author": "akitiaool",
+      "published_at": "2026-10-11T06:42:26Z",
+      "fetched_at": "2026-10-11T08:03:41.533895+00:00",
       "tags": [
         "AI写代码"
       ],
+      "is_featured": false,
+      "category": "资讯"
+    },
+    {
+      "id": "f556fc57b41b",
+      "title": "jarvislee90s-dot/tuvis",
+      "url": "https://github.com/jarvislee90s-dot/tuvis",
+      "summary": "兔维斯 Tuvis —— 你的桌面多 Agent 指挥台：会话监控、远程注入、Skill/MCP 资源管理与用量账本，一站式掌控 Claude Code、Codex、OpenCode 等 AI 编程工具",
+      "source": "GitHub",
+      "source_icon": "🐙",
+      "author": "jarvislee90s-dot",
+      "published_at": "2026-10-11T06:31:18Z",
+      "fetched_at": "2026-10-11T08:03:39.274601+00:00",
+      "tags": [
+        "agent-manager",
+        "ai-agent",
+        "claude-code",
+        "codex",
+        "opencode",
+        "AI编程工具"
+      ],
+      "is_featured": false,
+      "category": "资讯"
+    },
+    {
+      "id": "8a7b4471583e",
+      "title": "insistgang/ai-quota-monitor",
+      "url": "https://github.com/insistgang/ai-quota-monitor",
+      "summary": "🤖 一条命令汇总本机所有 AI 编程工具的额度用量（Kimi/Codex/Grok/MiniMax/Antigravity），附卡片式本地仪表盘",
+      "source": "GitHub",
+      "source_icon": "🐙",
+      "author": "insistgang",
+      "published_at": "2026-10-11T06:30:56Z",
+      "fetched_at": "2026-10-11T08:03:39.274621+00:00",
+      "tags": [
+        "ai-tools",
+        "cli",
+        "dashboard",
+        "python",
+        "quota-monitor",
+        "AI编程工具"
+      ],
+      "is_featured": false,
+      "category": "资讯"
+    },
+    {
+      "id": "9c6c961799a8",
+      "title": "Nideryabor/FuckDSManger",
+      "url": "https://github.com/Nideryabor/FuckDSManger",
+      "summary": "某 AI 聊天 App 的 LSPosed 模块 FuckDSManger —— 项目文档 + 发行版归档。含大纲 / 版本 / 专题 / 参考 / 原始备份 / 手写 smali 时代源码存档。仅供学习交流。",
+      "source": "GitHub",
+      "source_icon": "🐙",
+      "author": "Nideryabor",
+      "published_at": "2026-10-11T05:43:54Z",
+      "fetched_at": "2026-10-11T08:03:41.533912+00:00",
+      "tags": [
+        "AI写代码"
+      ],
+      "is_featured": false,
+      "category": "资讯"
+    },
+    {
+      "id": "956dde5b9a0d",
+      "title": "boommanpro/gaia-workflow-engine",
+      "url": "https://github.com/boommanpro/gaia-workflow-engine",
+      "summary": "一个现代化的可视化规则引擎平台，用于编排复杂的 AI 工作流。在无限画布上设计、测试和部署 AI 流程——无需编写代码。结合 flowgram.ai 的能力与 Java 服务端，提供生产级工作流管理。在此之上提供AI Agent / Copilot的助手编排能力。",
+      "source": "GitHub",
+      "source_icon": "🐙",
+      "author": "boommanpro",
+      "published_at": "2026-10-11T02:52:11Z",
+      "fetched_at": "2026-10-11T08:03:41.533929+00:00",
+      "tags": [
+        "agent",
+        "agent-workflow-engine",
+        "ai-agent",
+        "ai-copilot",
+        "flowgram",
+        "AI写代码"
+      ],
+      "is_featured": false,
+      "category": "资讯"
+    },
+    {
+      "id": "96b355c029f3",
+      "title": "让 AI 全自动做视频，太爽了！开源 AI 视频制作器 + Skill",
+      "url": "https://www.bilibili.com/video/av117415379801899",
+      "summary": "一句话让 AI 全自动做出 4K 视频，我把这套 AI 产品宣传视频制作器 + Skills 完全开源到了 GitHub，带你解锁全新 AI 视频创作玩法！在任意 AI 编程工具中使用项目（能用 Claude Opus 5.5 更好），AI Agent 会自动调研产品、确认需求、画出 Demo，再全自动完成写脚本、截图、配乐、剪辑，还能接入 ElevenLabs 配音。无论你是想宣传 APP、网站",
+      "source": "哔哩哔哩",
+      "source_icon": "📺",
+      "author": "程序员鱼皮",
+      "published_at": "2026-10-10T07:18:52+00:00",
+      "fetched_at": "2026-10-11T08:00:53.076147+00:00",
+      "tags": [
+        "AI编程工具"
+      ],
+      "is_featured": true,
+      "category": "精华"
+    },
+    {
+      "id": "0d2af3f77258",
+      "title": "Agibot",
+      "url": "https://www.producthunt.com/products/agibot",
+      "summary": "\n            Personal AI agent for your Mac using your own keys\n          \n          \n            Discussion\n            |\n            Link\n          ",
+      "source": "Product Hunt",
+      "source_icon": "📰",
+      "author": "Ökte Çilmi",
+      "published_at": "2026-10-10T06:04:39-07:00",
+      "fetched_at": "2026-10-11T08:03:36.113839+00:00",
+      "tags": [],
       "is_featured": false,
       "category": "资讯"
     },
@@ -337,7 +393,7 @@
       "source_icon": "📰",
       "author": "十三",
       "published_at": "2026-10-09T09:19:57+00:00",
-      "fetched_at": "2026-10-10T23:05:54.865717+00:00",
+      "fetched_at": "2026-10-11T08:01:15.136473+00:00",
       "tags": [],
       "is_featured": false,
       "category": "资讯"
@@ -351,21 +407,35 @@
       "source_icon": "📰",
       "author": "阮一峰的网络日志",
       "published_at": "2026-10-08T23:04:46+08:00",
-      "fetched_at": "2026-10-10T23:07:58.171763+00:00",
+      "fetched_at": "2026-10-11T08:03:19.241851+00:00",
       "tags": [],
       "is_featured": false,
       "category": "资讯"
     },
     {
-      "id": "c4a2bcddf401",
-      "title": "Hypervibe",
-      "url": "https://www.producthunt.com/products/hypervibe-2",
-      "summary": "\n            Run your AI coding agents on one infinite board\n          \n          \n            Discussion\n            |\n            Link\n          ",
+      "id": "653b7586ed68",
+      "title": "Edgee Mod for Claude Code",
+      "url": "https://www.producthunt.com/products/edgee",
+      "summary": "\n            Use any model inside Claude Code, keep your Claude plan\n          \n          \n            Discussion\n            |\n            Link\n          ",
       "source": "Product Hunt",
       "source_icon": "📰",
-      "author": "Lucio",
-      "published_at": "2026-10-07T17:23:22-07:00",
-      "fetched_at": "2026-10-10T23:08:11.045375+00:00",
+      "author": "fmerian",
+      "published_at": "2026-10-08T01:41:39-07:00",
+      "fetched_at": "2026-10-11T08:03:36.113918+00:00",
+      "tags": [],
+      "is_featured": false,
+      "category": "资讯"
+    },
+    {
+      "id": "82ade1d20b43",
+      "title": "HireKey",
+      "url": "https://www.producthunt.com/products/hirekey",
+      "summary": "\n            Your recruiter-informed AI copilot for tech job search\n          \n          \n            Discussion\n            |\n            Link\n          ",
+      "source": "Product Hunt",
+      "source_icon": "📰",
+      "author": "Jonno Riekwel",
+      "published_at": "2026-10-02T01:43:03-07:00",
+      "fetched_at": "2026-10-11T08:03:36.113655+00:00",
       "tags": [],
       "is_featured": false,
       "category": "资讯"
@@ -379,7 +449,7 @@
       "source_icon": "📰",
       "author": "阮一峰的网络日志",
       "published_at": "2026-09-04T07:59:05+08:00",
-      "fetched_at": "2026-10-10T23:07:58.172920+00:00",
+      "fetched_at": "2026-10-11T08:03:19.243517+00:00",
       "tags": [],
       "is_featured": false,
       "category": "资讯"
@@ -393,7 +463,7 @@
       "source_icon": "📰",
       "author": "阮一峰的网络日志",
       "published_at": "2026-08-28T07:56:43+08:00",
-      "fetched_at": "2026-10-10T23:07:58.173415+00:00",
+      "fetched_at": "2026-10-11T08:03:19.244276+00:00",
       "tags": [],
       "is_featured": false,
       "category": "教程"
@@ -407,9 +477,25 @@
       "source_icon": "🔶",
       "author": "kirushik",
       "published_at": "2026-06-30T15:44:24Z",
-      "fetched_at": "2026-10-10T23:05:49.853857+00:00",
+      "fetched_at": "2026-10-11T08:01:08.264331+00:00",
       "tags": [
         "Claude Code"
+      ],
+      "is_featured": true,
+      "category": "精华"
+    },
+    {
+      "id": "62719554f279",
+      "title": "【2026最新Cursor使用教程】史上最强 AI 编程工具Cursor！Cursor保姆级使用教程！从入门到实战，零基础小白也能学会",
+      "url": "https://www.bilibili.com/video/av116678943839396",
+      "summary": "【2026最新版】这绝对是B站讲的最好的Cursor全流程实战教程， 全程干货无废话，学完即就业！\n视频教程 附 所需源码 文档 软件",
+      "source": "哔哩哔哩",
+      "source_icon": "📺",
+      "author": "有点子is丫",
+      "published_at": "2026-06-02T05:57:01+00:00",
+      "fetched_at": "2026-10-11T08:00:41.424588+00:00",
+      "tags": [
+        "Cursor编辑器"
       ],
       "is_featured": true,
       "category": "精华"
@@ -423,7 +509,7 @@
       "source_icon": "🔶",
       "author": "e12e",
       "published_at": "2026-05-06T15:06:37Z",
-      "fetched_at": "2026-10-10T23:05:47.845965+00:00",
+      "fetched_at": "2026-10-11T08:01:02.217962+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -439,7 +525,7 @@
       "source_icon": "🔶",
       "author": "indrora",
       "published_at": "2026-05-02T19:57:26Z",
-      "fetched_at": "2026-10-10T23:05:50.864713+00:00",
+      "fetched_at": "2026-10-11T08:01:11.561226+00:00",
       "tags": [
         "Copilot"
       ],
@@ -455,7 +541,7 @@
       "source_icon": "🔶",
       "author": "elmean",
       "published_at": "2026-04-30T14:36:58Z",
-      "fetched_at": "2026-10-10T23:05:49.853875+00:00",
+      "fetched_at": "2026-10-11T08:01:08.264361+00:00",
       "tags": [
         "Claude Code"
       ],
@@ -471,7 +557,7 @@
       "source_icon": "🔶",
       "author": "gardaani",
       "published_at": "2026-04-09T03:51:41Z",
-      "fetched_at": "2026-10-10T23:05:48.383180+00:00",
+      "fetched_at": "2026-10-11T08:01:04.040798+00:00",
       "tags": [
         "AI coding tool"
       ],
@@ -487,7 +573,7 @@
       "source_icon": "🔶",
       "author": "drob518",
       "published_at": "2026-04-06T18:31:03Z",
-      "fetched_at": "2026-10-10T23:05:47.845970+00:00",
+      "fetched_at": "2026-10-11T08:01:02.217973+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -503,7 +589,7 @@
       "source_icon": "🔶",
       "author": "StanAngeloff",
       "published_at": "2026-04-06T13:50:35Z",
-      "fetched_at": "2026-10-10T23:05:49.853872+00:00",
+      "fetched_at": "2026-10-11T08:01:08.264356+00:00",
       "tags": [
         "Claude Code"
       ],
@@ -519,7 +605,7 @@
       "source_icon": "🔶",
       "author": "alex000kim",
       "published_at": "2026-03-31T13:04:30Z",
-      "fetched_at": "2026-10-10T23:05:49.853869+00:00",
+      "fetched_at": "2026-10-11T08:01:08.264351+00:00",
       "tags": [
         "Claude Code"
       ],
@@ -535,7 +621,7 @@
       "source_icon": "🔶",
       "author": "treexs",
       "published_at": "2026-03-31T09:00:40Z",
-      "fetched_at": "2026-10-10T23:05:49.853866+00:00",
+      "fetched_at": "2026-10-11T08:01:08.264346+00:00",
       "tags": [
         "Claude Code"
       ],
@@ -551,7 +637,7 @@
       "source_icon": "🔶",
       "author": "pavo-etc",
       "published_at": "2026-03-30T04:04:31Z",
-      "fetched_at": "2026-10-10T23:05:50.864709+00:00",
+      "fetched_at": "2026-10-11T08:01:11.561220+00:00",
       "tags": [
         "Copilot"
       ],
@@ -567,7 +653,7 @@
       "source_icon": "🔶",
       "author": "fi-le",
       "published_at": "2026-03-03T18:02:04Z",
-      "fetched_at": "2026-10-10T23:05:48.383124+00:00",
+      "fetched_at": "2026-10-11T08:01:04.040754+00:00",
       "tags": [
         "AI coding tool"
       ],
@@ -583,7 +669,7 @@
       "source_icon": "🔶",
       "author": "robtherobber",
       "published_at": "2026-03-02T10:23:06Z",
-      "fetched_at": "2026-10-10T23:05:50.864719+00:00",
+      "fetched_at": "2026-10-11T08:01:11.561236+00:00",
       "tags": [
         "Copilot"
       ],
@@ -599,7 +685,7 @@
       "source_icon": "🔶",
       "author": "itunpredictable",
       "published_at": "2026-02-26T16:07:11Z",
-      "fetched_at": "2026-10-10T23:05:47.845976+00:00",
+      "fetched_at": "2026-10-11T08:01:02.217985+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -615,7 +701,7 @@
       "source_icon": "🔶",
       "author": "arjunbanker",
       "published_at": "2026-02-13T19:22:18Z",
-      "fetched_at": "2026-10-10T23:05:47.845973+00:00",
+      "fetched_at": "2026-10-11T08:01:02.217980+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -623,17 +709,17 @@
       "category": "精华"
     },
     {
-      "id": "15659cc09828",
-      "title": "不忍了！彻底移除 Windows 11 自带 AI 功能（Copilot），让电脑瞬间清爽！｜零度解说",
-      "url": "https://www.bilibili.com/video/av116018240362246",
-      "summary": "移除卸载工具下载：https://bittly.cc/osDmM",
-      "source": "哔哩哔哩",
-      "source_icon": "📺",
-      "author": "零度解说",
-      "published_at": "2026-02-06T12:30:00+00:00",
-      "fetched_at": "2026-10-10T23:05:36.736951+00:00",
+      "id": "dc627b9f4ca8",
+      "title": "GLM-5: From Vibe Coding to Agentic Engineering",
+      "url": "https://z.ai/blog/glm-5",
+      "summary": "",
+      "source": "Hacker News",
+      "source_icon": "🔶",
+      "author": "meetpateltech",
+      "published_at": "2026-02-11T16:41:33Z",
+      "fetched_at": "2026-10-11T08:01:02.217990+00:00",
       "tags": [
-        "Copilot编程"
+        "vibe coding"
       ],
       "is_featured": true,
       "category": "精华"
@@ -647,7 +733,7 @@
       "source_icon": "🔶",
       "author": "iamkrystian17",
       "published_at": "2026-02-03T08:45:57Z",
-      "fetched_at": "2026-10-10T23:05:48.383142+00:00",
+      "fetched_at": "2026-10-11T08:01:04.040780+00:00",
       "tags": [
         "AI coding tool"
       ],
@@ -655,31 +741,15 @@
       "category": "资讯"
     },
     {
-      "id": "b5b8022b5aab",
-      "title": "After two years of vibecoding, I'm back to writing by hand",
-      "url": "https://atmoio.substack.com/p/after-two-years-of-vibecoding-im",
+      "id": "c0d89d0b84b6",
+      "title": "I know when you're vibe coding",
+      "url": "https://alexkondov.com/i-know-when-youre-vibe-coding/",
       "summary": "",
       "source": "Hacker News",
       "source_icon": "🔶",
-      "author": "mobitar",
-      "published_at": "2026-01-26T13:36:22Z",
-      "fetched_at": "2026-10-10T23:05:47.845959+00:00",
-      "tags": [
-        "vibe coding"
-      ],
-      "is_featured": true,
-      "category": "精华"
-    },
-    {
-      "id": "048499b67baf",
-      "title": "Gas Town's agent patterns, design bottlenecks, and vibecoding at scale",
-      "url": "https://maggieappleton.com/gastown",
-      "summary": "",
-      "source": "Hacker News",
-      "source_icon": "🔶",
-      "author": "pavel_lishin",
-      "published_at": "2026-01-23T16:19:18Z",
-      "fetched_at": "2026-10-10T23:05:47.845979+00:00",
+      "author": "thunderbong",
+      "published_at": "2025-07-31T04:16:40Z",
+      "fetched_at": "2026-10-11T08:01:02.217996+00:00",
       "tags": [
         "vibe coding"
       ],
@@ -695,7 +765,7 @@
       "source_icon": "🔶",
       "author": "walterbell",
       "published_at": "2025-07-21T16:55:53Z",
-      "fetched_at": "2026-10-10T23:05:48.383136+00:00",
+      "fetched_at": "2026-10-11T08:01:04.040770+00:00",
       "tags": [
         "AI coding tool"
       ],
@@ -711,7 +781,7 @@
       "source_icon": "🔶",
       "author": "agtestdvn",
       "published_at": "2025-07-17T18:55:14Z",
-      "fetched_at": "2026-10-10T23:05:50.354515+00:00",
+      "fetched_at": "2026-10-11T08:01:09.383338+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -727,7 +797,7 @@
       "source_icon": "🔶",
       "author": "agtestdvn",
       "published_at": "2025-07-16T21:42:53Z",
-      "fetched_at": "2026-10-10T23:05:50.354504+00:00",
+      "fetched_at": "2026-10-11T08:01:09.383321+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -743,7 +813,7 @@
       "source_icon": "🔶",
       "author": "manc_lad",
       "published_at": "2025-07-16T16:32:27Z",
-      "fetched_at": "2026-10-10T23:05:50.354487+00:00",
+      "fetched_at": "2026-10-11T08:01:09.383293+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -759,7 +829,7 @@
       "source_icon": "🔶",
       "author": "mychaelangelo",
       "published_at": "2025-07-14T18:13:50Z",
-      "fetched_at": "2026-10-10T23:05:50.354509+00:00",
+      "fetched_at": "2026-10-11T08:01:09.383329+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -775,7 +845,7 @@
       "source_icon": "🔶",
       "author": "gk1",
       "published_at": "2025-07-10T23:38:11Z",
-      "fetched_at": "2026-10-10T23:05:48.383121+00:00",
+      "fetched_at": "2026-10-11T08:01:04.040749+00:00",
       "tags": [
         "AI coding tool"
       ],
@@ -791,7 +861,7 @@
       "source_icon": "🔶",
       "author": "nomdep",
       "published_at": "2025-06-17T00:33:45Z",
-      "fetched_at": "2026-10-10T23:05:48.383115+00:00",
+      "fetched_at": "2026-10-11T08:01:04.040739+00:00",
       "tags": [
         "AI coding tool"
       ],
@@ -807,7 +877,7 @@
       "source_icon": "🔶",
       "author": "scaredpelican",
       "published_at": "2025-04-14T16:24:28Z",
-      "fetched_at": "2026-10-10T23:05:48.926916+00:00",
+      "fetched_at": "2026-10-11T08:01:06.789956+00:00",
       "tags": [
         "cursor IDE"
       ],
@@ -823,7 +893,7 @@
       "source_icon": "🔶",
       "author": "roseway4",
       "published_at": "2025-03-28T14:44:59Z",
-      "fetched_at": "2026-10-10T23:05:48.926933+00:00",
+      "fetched_at": "2026-10-11T08:01:06.789985+00:00",
       "tags": [
         "cursor IDE"
       ],
@@ -839,7 +909,7 @@
       "source_icon": "🔶",
       "author": "bchelli",
       "published_at": "2025-03-17T06:27:22Z",
-      "fetched_at": "2026-10-10T23:05:48.926925+00:00",
+      "fetched_at": "2026-10-11T08:01:06.789971+00:00",
       "tags": [
         "cursor IDE"
       ],
@@ -855,7 +925,7 @@
       "source_icon": "🔶",
       "author": "Jimmc414",
       "published_at": "2025-02-25T17:26:36Z",
-      "fetched_at": "2026-10-10T23:05:50.354520+00:00",
+      "fetched_at": "2026-10-11T08:01:09.383346+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -871,7 +941,7 @@
       "source_icon": "🔶",
       "author": "bakugo",
       "published_at": "2025-02-24T18:28:59Z",
-      "fetched_at": "2026-10-10T23:05:49.853863+00:00",
+      "fetched_at": "2026-10-11T08:01:08.264340+00:00",
       "tags": [
         "Claude Code"
       ],
@@ -887,7 +957,7 @@
       "source_icon": "🔶",
       "author": "iyn",
       "published_at": "2025-02-21T20:07:29Z",
-      "fetched_at": "2026-10-10T23:05:48.926944+00:00",
+      "fetched_at": "2026-10-11T08:01:06.790005+00:00",
       "tags": [
         "cursor IDE"
       ],
@@ -903,7 +973,7 @@
       "source_icon": "🔶",
       "author": "marvin-hansen",
       "published_at": "2024-12-22T09:21:12Z",
-      "fetched_at": "2026-10-10T23:05:50.354498+00:00",
+      "fetched_at": "2026-10-11T08:01:09.383311+00:00",
       "tags": [
         "Windsurf AI"
       ],
@@ -919,7 +989,7 @@
       "source_icon": "🔶",
       "author": "vitaly-pavlenko",
       "published_at": "2024-10-03T20:42:45Z",
-      "fetched_at": "2026-10-10T23:05:48.926939+00:00",
+      "fetched_at": "2026-10-11T08:01:06.789995+00:00",
       "tags": [
         "cursor IDE"
       ],
@@ -935,7 +1005,7 @@
       "source_icon": "🔶",
       "author": "simonpure",
       "published_at": "2024-08-26T03:44:48Z",
-      "fetched_at": "2026-10-10T23:05:48.926921+00:00",
+      "fetched_at": "2026-10-11T08:01:06.789965+00:00",
       "tags": [
         "cursor IDE"
       ],
@@ -951,7 +1021,7 @@
       "source_icon": "🔶",
       "author": "bencollier49",
       "published_at": "2021-07-02T11:52:19Z",
-      "fetched_at": "2026-10-10T23:05:50.864716+00:00",
+      "fetched_at": "2026-10-11T08:01:11.561231+00:00",
       "tags": [
         "Copilot"
       ],
@@ -967,7 +1037,7 @@
       "source_icon": "🔶",
       "author": "todsacerdoti",
       "published_at": "2021-06-29T14:29:39Z",
-      "fetched_at": "2026-10-10T23:05:50.864704+00:00",
+      "fetched_at": "2026-10-11T08:01:11.561210+00:00",
       "tags": [
         "Copilot"
       ],
@@ -983,7 +1053,7 @@
       "source_icon": "🔶",
       "author": "wodow",
       "published_at": "2016-04-14T14:44:57Z",
-      "fetched_at": "2026-10-10T23:05:50.864722+00:00",
+      "fetched_at": "2026-10-11T08:01:11.561241+00:00",
       "tags": [
         "Copilot"
       ],
